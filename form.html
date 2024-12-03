@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="inputt" maxlength="10">
+        <div id="errormessage"></div>
+    </form>
+    <script>
+        const username = document.getElementById("inputt");
+        const errorMessage = document.getElementById("errormessage")
+        username.addEventListener('input', ()=> {
+            const value = username.value;
+            if(!isNaN(value)){
+                alert('Error: please enter text only');
+                errorMessage.textContent =""//clear the input field
+            }
+
+
+            
+        });
+    </script>
+</body>
+</html>

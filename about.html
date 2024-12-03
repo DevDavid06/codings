@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="icon" type="image/x-icon" href="../img/IMG-20240815-WA0011.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+         .headd{
+            width: 100%;
+        }
+        .header{
+            background-color: black;
+            padding: 10px;
+            display: flex;
+        }
+        .image{
+            padding-left: 140px;            
+            margin: -29px;
+            padding-top: 12px;
+        }
+        .img{
+            max-width:100px;   
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            padding-left: 70px;
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        #active{
+            color: #FFD0A0;
+        }
+        #active:hover{
+            color: white;
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .link:hover{
+            color: #FFD0A0;
+        }
+        .comp{
+            padding-left: 500px;
+        }
+        .contt{
+            background-color: #FFD0A0;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            margin: -13px;
+        }
+        .men{
+            text-decoration: none;
+            color: black;
+        }
+        .cont:hover{
+            color: white;
+        }
+        .header1{
+            background-image: url(img/vOeB66Yoriw.png);
+            background-size: cover;
+            height: 400px;
+        }
+        .subhead{
+            font-weight: bold;
+            font-size: 15px;
+            padding-top: 170px;
+            padding-left: 100px;
+        }
+        .subhead1{
+            font-size: 35px;
+            font-weight: bold;
+            padding-left: 100px;
+        }
+        .bibbles{
+            display: flex;
+            padding-top: 30px;
+            padding-left: 200px;
+            gap: 30px;
+        }
+        .bibble{
+            height: 400px;
+            width: 450px;
+            background-size: cover;
+        }
+        .bibble2{
+            width: 500px;
+            font-weight: 600;
+            font-size: 25px;
+            padding-top: 70px;
+        }
+        .header2{
+            padding: 50px;
+        
+        }
+        .txt{
+            font-weight: 500;
+            text-align: center;
+        }
+        .txt1{
+            font-size: 40px;
+            padding-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .txt2{
+            width: 600px;
+            text-align: center;
+            padding-left: 320px;
+            padding-top: 10px;
+        }
+        .subhead2{
+            display: flex;
+            gap: 20px;
+            padding-left:170px ;
+            padding-top: 40px;
+        }
+        .img1{
+            width: 250px;
+        }
+        .img2{
+            width: 350px;
+        }
+        .subb1{
+            padding-top: 70px;
+        }
+        .header3{
+            display: flex;
+            padding-top: 20px;
+            gap: 30px;
+            padding-left: 250px;
+        }
+        .txt3i{
+            font-size: 15px;
+            font-weight: 550;
+        }
+        .txt3ii{
+            font-size:30px;
+            padding-top: 20px;
+            font-weight: bold;
+            width: 400px;
+        }
+        .txt3iii{
+            width: 400px;
+            padding-top: 25px;
+        }
+        .header4{
+            padding-top: 80px;
+        }
+        .txt4{
+            text-align: center;
+            font-size: 17px;
+            font-weight: 550;
+        }
+        .txt4i{
+            font-size: 40px;
+            font-weight: bold;
+            width: 450px;
+            text-align: center;
+            padding-left: 440px;
+        }
+        .header4i{
+            display: flex;
+            padding-left: 200px;
+            padding-top: 90px;
+            gap: 30px;
+        }
+        .txt4ii{
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 90px;
+        }
+        .txt4iii{
+            width: 500px;
+            padding-top: 30px;
+        }
+        .header4ii{
+            display: flex;
+            padding-left: 170px;
+            padding-top: 90px;
+            gap: 30px;
+        }
+        .iimg{
+            width: 500px;
+            height: 350px;
+        }
+        .dadd{
+            font-weight: bold;
+            font-size: 27px; 
+            width: 440px;
+            text-align: center;
+            padding-left: 450px;
+        }
+        .team{
+            padding-top: 50px;
+        }
+        .header5{
+            padding-top: 50px;
+        }
+        .header5i{
+            display: flex;
+            padding-left: 35px;
+            padding-top: 50px;
+            gap: 10px;
+            padding-bottom: 60px;
+        }
+        .txt5{
+            font-weight: 550;
+            text-align: center;
+        }
+        .txt5i{
+            font-size: 43px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .header5ii{
+            background-color: #f5f2f0;
+            padding: 30px;
+            width: 250px;
+            height: 300px;
+        }
+        .txt5ii{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .image5{
+            padding-left: 30px;
+            padding-top: 40px;
+        }
+        .image6{
+            padding-left: 30px;
+            padding-top: 50px;
+        }
+        .imag3{
+            width: 150px;
+            border-radius: 50%;
+            border:  5px solid white;
+            height: 150px;
+            object-fit: cover;
+            background-attachment: fixed;
+        }
+
+        .footer{
+            background-color: #161722;
+            height: 250px;
+            color: white;
+            font-size: 14px;
+            font-weight: 100;
+            padding: 20px;
+            display: flex;
+            gap: 80px;
+        }
+        .footimg{
+            width: 100px;
+            margin: -30px;
+            padding-top: 29px;
+        }
+        .endfont{
+            color: white;
+        }
+        .subfoot{
+            line-height: 30px;
+            padding-left: 50px;
+        }
+        .numb{
+            padding-top: 30px;
+        }
+        .foot{
+            font-weight: bold;
+            padding-top: 28px;
+            font-size: 15px;
+        }
+        .endiword{
+            padding-top: 25px;
+        }
+        .enword{
+            display: flex;
+            padding-top: 28px;
+            gap: 20px;
+        }
+        .con{
+            width: 20px;
+        }
+        .la1{
+            font-size: 25px;
+            font-weight: bold;
+            width: 400px;
+            padding-top: 40px;
+            padding-left: 40px;
+        }
+        .inp-btn{
+            display: flex;
+            padding-top: 60px;
+            padding-left: 36px;
+
+        }
+
+        .inpu{
+            background-color: transparent;
+            padding: 16px;
+            border: 1px solid grey;
+            width: 250px;
+            border-radius: 10px;
+            color: white;
+        }
+        .btnn{
+            background-color:#FFD0A0;
+            color: black;
+            width: 130px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .lang{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="headd">
+        <div class="header">
+            <div class="image">
+                <img class="img" src="img/IMG-20240815-WA0011-removebg-preview.png" alt="">
+            </div>
+            <div class="menu">
+                <a class="link" href="index.html">HOME</a>
+                <a id="active" class="link" href="about.html">ABOUT US</a>
+                <a class="link" href="sermon.html">SERMON</a>
+                <a class="link" href="blog.html">BLOG</a>
+            
+            <a class="men" href="">
+                <div class="comp">
+                    <div class="contt">
+                        <span class="cont">CONTACT US</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="header1" >
+            <div class="subb">
+                <div class="subhead" >
+                    <span>ABOUT US</span>
+                </div>
+                <div class="subhead1" >
+                    <span>EDUCATING THE WORLD AROUND US</span>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <div class="dadd">
+                <span> MEER OUR GENERAL OVERSEER,<br> PROFHET SAMSON FOLORUNSHO</span>
+            </div>
+            <div class="bibbles">
+                <div class="bibble1">
+                    <img class="bibble" src="img/IMG-20240926-WA0063.jpg" alt="">
+                </div>
+                <div class="bibble2"> 
+                    <span>Our church was founded by Prophet Samson Folorunsho, a visionary leader dedicated to spreading God’s love and fostering community. With unwavering faith and commitment, he inspired countless lives, creating a welcoming space for worship, growth, and service to others.</span>
+                </div>
+            </div>
+        </div>
+        <div class="header2">
+            <div class="txt">
+                <span>WELCOME TO OUR CHURCH</span>
+            </div>
+            <div class="txt1">
+                <span>LOVE AND COMPASSION</span>
+            </div>
+            <div class="txt2">
+                <span>At our church, we embrace love and compassion as the foundation of our faith, fostering a welcoming community where everyone is valued, supported, and uplifted in their spiritual journey.</span>
+            </div>
+            <div class="subhead2">
+                <div class="subb1">
+                    <img class="img1" src="img/a-bearded-man-praying-5206040.png" alt="">
+                </div>
+                <div>
+                    <img class="img2" src="img/man-and-woman-reading-book-while-sitting-on-pews-8468470.png" alt="">
+                </div>
+                <div class="subb1">
+                    <img class="img1" src="img/people-sitting-on-brown-pews-8674151.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="header3">
+            <div class="txt3">
+                <div class="txt3i">
+                    <span>OUR MISSION AND VISSION</span>
+                </div>
+                <div class="txt3ii">
+                    <span>STRIVING FOR A BETTER TOMORROW</span>
+                </div>
+                <div class="txt3iii">
+                    <span>"At our church, we are dedicated to striving for a better tomorrow by fostering a strong, loving community rooted in faith, compassion, and service. Together, we work to uplift one another, serve those in need, and create a brighter future through hope, unity, and God's guidance."</span>
+                </div>
+            </div>
+            <div class="txt3">
+                <div class="txt3i">
+                    <span>WHAT WE DO</span>
+                </div>
+                <div class="txt3ii">
+                    <span>BRINGING PEACE AND JOY TO THE WORLD</span>
+                </div>
+                <div class="txt3iii">
+                    <span>Through Christ Jesus, we bring peace and joy to the world by sharing His message of love, forgiveness, and salvation. By living as His disciples, we strive to reflect His compassion, serve others selflessly, and spread the hope and grace that transforms lives, fostering unity and harmony in His name.</span>
+                </div>
+            </div>
+        </div>
+        <div class="header4">
+            <div class="txt4">
+                <span>BENEFITS</span>
+            </div>
+            <div class="txt4i">
+                <span>THE BENEFITS OF JOINING OUR CHURCH</span>
+            </div>
+            <div class="header4i">
+                <div>
+                    <div class="txt4ii">
+                        <span>FIND FULFILLMENT AND JOY</span>
+                    </div>
+                    <div class="txt4iii">
+                        <span>Find fulfillment and joy through a relationship with Christ at our church. Experience His love, grow in faith, and discover purpose as we worship, learn, and serve together. Join us in a supportive community where hearts are renewed and lives transformed.</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/3MWdi5.png" alt="">
+                </div>
+            </div>
+            <div class="header4ii">
+                <div>
+                    <img src="img/3Xmcv5MjZpw.png" alt="">
+                </div>
+                <div>
+                    <div class="txt4ii">
+                        <span>SHARED VALUES</span>
+                    </div>
+                    <div class="txt4iii">
+                        <span>At our church, we embrace shared values of love, faith, and community. We seek to follow Christ's teachings through compassion, service, and unity. Together, we strive to grow spiritually, support one another, and spread God’s love to all.</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="header4i">
+                <div>
+                    <div class="txt4ii">
+                        <span>CHARITY EVENTS</span>
+                    </div>
+                    <div class="txt4iii">
+                        Join us in making a difference through our church's charity events. Together, we support those in need, uplift our community, and share Christ’s love through acts of kindness, donations, and service. Everyone is welcome to participate and help!
+                    </div>
+                </div>
+                <div>
+                    <img src="img/3MWdi5_6Hrc.png" alt="">
+                </div>
+            </div>
+            <div class="header4ii">
+                <div>
+                    <img class="iimg" src="img/A warm.webp" alt="">
+                </div>
+                <div>
+                    <div class="txt4ii">
+                        <span>ALL ARE WELCOME</span>
+                    </div>
+                    <div class="txt4iii">
+                        <span>At our church, everyone is welcome. No matter your background, you belong here. We invite you to experience God’s love, grow in faith, and be part of a caring community that celebrates diversity and embraces all with open hearts.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header5">
+            <div class="txt5">
+                <span>CHURCH MEMBERS</span>
+            </div>
+            <div class="txt5i">
+                <span>MEET OUR INSPIRATIONAL TEAM</span>
+            </div>
+            <div class="header5i">
+                <div class="header5ii">
+                    <div class="image6">
+                        <img class="imag3" src="img/mum.jpg" alt="">
+                    </div>
+                    <div class="txt5ii">
+                        <span>PRISCILLA FOLORUNSHO</span>
+                    </div>
+                    <div class="txt5iii">
+                        <span>Pastor Mrs, Church</span>
+                    </div>
+                </div>
+                <div class="header5ii">
+                    <div class="image5">
+                        <img src="img/woman-in-sleeveless-top-2075673.png" alt="">
+                    </div>
+                    <div class="txt5ii">
+                        <span>PRISCILLA FOLORUNSHO</span>
+                    </div>
+                    <div class="txt5iii">
+                        <span>Prophetess, Church</span>
+                    </div>
+                </div>
+                <div class="header5ii">
+                    <div class="image5">
+                        <img src="img/woman-in-sleeveless-top-2075673.png" alt="">
+                    </div>
+                    <div class="txt5ii">
+                        <span>PRISCILLA FOLORUNSHO</span>
+                    </div>
+                    <div class="txt5iii">
+                        <span>Prophetess, Church</span>
+                    </div>
+                </div>
+                <div class="header5ii">
+                    <div class="image5">
+                        <img src="img/woman-in-sleeveless-top-2075673.png" alt="">
+                    </div>
+                    <div class="txt5ii">
+                        <span>PRISCILLA FOLORUNSHO</span>
+                    </div>
+                    <div class="txt5iii">
+                        <span>Prophetess, Church</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="footer">
+        <div class="subfoot">
+            <div class="foot-img">
+                <img class="footimg" src="img/IMG-20240815-WA0011-removebg-preview.png" alt="">
+            </div>
+            <div>
+                <i class="fa fa-copyright endfont"></i>
+                <span class="endword"> COPYRIGHT WEBSAJAMION 2024</span>
+            </div>
+            <div class="numb">
+                <span>(+234) 81-6263-8041</span>
+            </div>
+            <div>
+                <span>4 BOSUN CLOSE, CROWN ESTATE</span>
+            </div>
+            <div>
+                <span>Folorunshosamson@yahoo.com</span>
+            </div>
+        </div>
+        <div class="subfoot">
+            <div class="foot">
+                <span>Quicklinks</span>
+            </div>
+            <div class="endiword">
+                <span>ABOUT US</span>
+            </div>
+            <div class="numb">
+                <span>SERMONS</span>
+            </div>
+            <div>
+                <span>EVENTS</span>
+            </div>
+            <div>
+                <span>BLOG</span>
+            </div>
+        </div>
+        <div class="subfoot">
+            <div class="foot">
+                <span>Connect</span>
+            </div>
+            <div class="enword">
+                <div>
+                    <a href=""><img class="con" src="img/facebook.png" alt=""></a>
+                </div>
+                <div>
+                    <a href=""><img class="con" src="img/Negative.png" alt=""></a>
+                </div>
+                <div>
+                    <a href=""><img class="con" src="img/Vector.png" alt=""></a>
+                </div>
+            </div>
+         </div>
+         <div>
+            <div class="la1"> 
+                <span>SUBSCRIBE TO GET LATEST UPDATES AND NEWS</span>
+            </div>
+            <div class="inp-btn">
+                <div class="inp">
+                    <input class="inpu" type="email" name="" id="" placeholder="Yourmail@gmail.com">
+                </div>
+                <a href="" class="lang">
+                <div class="bttnn">
+                    <div class="btnn">
+                        <span>SUBSCRIBE</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+         </div>
+    </div>
+</body>
+</html>

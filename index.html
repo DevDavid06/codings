@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage|C.M.C</title>
+    <link rel="icon" type="image/x-icon" href="../img/IMG-20240815-WA0011.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+       .headd{
+            width: 100%;
+        }
+        .header{
+            background-color: black;
+            padding: 10px;
+            display: flex;
+        }
+        .image{
+            padding-left: 140px;            
+            margin: -29px;
+            padding-top: 12px;
+        }
+        .img{
+            max-width:100px;   
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            padding-left: 70px;
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        #active{
+            color: #FFD0A0;
+        }
+        #active:hover{
+            color: white;
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .link:hover{
+            color: #FFD0A0;
+        }
+        .comp{
+            padding-left: 500px;
+        }
+        .contt{
+            background-color: #FFD0A0;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            margin: -13px;
+        }
+        .men{
+            text-decoration: none;
+            color: black;
+        }
+        .cont:hover{
+            color: white;
+        }
+        .header1{
+            background-image: url(img/woman-in-orange-coat-with-black-and-brown-scarf-5418305.png);
+            background-size: cover;
+            height: 500px;
+        }
+        .txt{
+            font-weight: bold;
+            color: white;
+            font-size: 25px;
+            padding-left: 100px;
+            padding-top: 100px;
+            width: 400px;
+        }
+        .txt1{
+            color: white;
+            width: 300px;
+            padding-left: 100px;
+        }
+        .bttn{
+            padding-left: 100px;
+        }
+        .btn{
+            background-color: #FFD0A0;
+            text-align: center;
+            width: 120px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .ttxt2{
+            padding-left: 100px;
+        }
+        .txt2{
+            color: white;
+            background-color: black;
+            width: 400px;
+        }
+        .header2{
+            padding: 60px;
+            background-color:lavender;
+        }
+        .txt3{
+            text-align: center;
+            font-size: small; 
+        }
+        .txt4{
+            text-align: center;
+            font-size: 24px;
+        }
+        .line{
+            background-color:#FFF5EB ;
+            padding: 50px;
+            width: 800px;
+            
+            border-bottom: 15px solid #FFD0A0;
+        }
+        .subhead{
+            display: flex;
+            gap: 50px;
+            padding-left: 10px;
+            padding-top: 30px;
+        }
+        .font{
+            background-color: #FFD0A0;
+            width: 20px;
+            border-radius:50px ;
+            text-align: center;
+            padding: 10px;
+        }   
+        .txt5{
+            font-weight: bold;
+            padding-top: 20px;
+            font-size: 23px;
+        }
+        .txt6{
+            padding-top: 10px;
+        }
+        .header3{
+            text-align: center;
+            
+            
+        }
+        .txtx7{
+            font-size: 15px;
+        }
+        .jjjj{
+            text-align: center;
+        }
+        .txt8{
+            width: 500px;
+            padding-left: 430px;
+        }
+        .bttn2{
+            padding-top: 20px;
+            padding-left: 590px;
+        }
+        .btn2{
+            width: 120px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #FFD0A0;
+
+        }
+        
+        .image2{
+            width: 200px;
+        }
+        .subhead3{
+            display: flex;
+            gap:20px ;
+            padding-left: 250px;
+        }
+        .imgg2{
+            width: 200px;
+        }
+        .subhead3i{
+            width: 250px;
+        }
+        .subhead3ii{
+            width: 300px;
+        } 
+        .subhead3-2{
+            padding-top: 50px;
+        }  
+        .subhead3iii{
+            width: 250px;
+        }
+        .header4{
+            padding-top: 30px;
+        }
+        .txt9{
+            font-size: 11px;
+        }
+        .txt10{
+            width: 550px;
+            padding-left: 390px;
+        }
+        .txt11{
+            display: flex;
+            padding-left: 620px;
+            padding-top: 10px;
+        }
+        .subtxt11{
+            font-size: 13px;
+            padding-top: 2px;
+        }
+        .header5{
+            padding-top: 70px;
+        }
+        .subhead5{
+            background-color: lavender;
+            text-align: center;
+            height: 700px;
+        }
+        .subhead5i{
+            padding-top: 70px;
+        }
+        .subhead5ii{
+            font-size: 15px;
+        }
+        .subhead5iii{
+            width: 500px;
+            padding-left: 430px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .backs{
+            display: flex;
+            padding-left: 100px;
+            padding-top: 40px;
+            gap: 20px;
+        }
+        .back{
+            position: absolute;
+            color: white;
+            width: 135px;
+            padding-top: 200px;
+            font-size: 15px;
+            padding-left: 10px;
+            text-align: left;
+        }
+        .image3{
+            width: 260px; 
+             
+            height: 300px;
+        }
+        .back1{
+            position: absolute;
+            color: white;
+            width: 200px;
+            padding-top: 200px;
+            font-size: 15px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .back2{
+            position: absolute;
+            color: white;
+            width: 170px;
+            padding-top: 200px;
+            font-size: 15px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .bot{
+            border-bottom: 2px solid black;
+            border-radius: 20px;
+            background-color: black;
+        }
+        .header6{
+            height: 700px;
+        }
+        .subhead6{
+            margin: 60px 50px;
+        }
+        .serm{
+            text-align: center;
+            font-size: 14px;
+        }
+        .serm2{
+            text-align: center;
+            width: 450px;
+            padding-left:400px;
+        }
+        .serm3{
+            background-color: #FFF5EB;
+            width: 250px;
+            padding: 60px;
+            height: 300px;
+        }
+        .serm4{
+            font-size: 13px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, orange, orangered );
+            -webkit-background-clip:text;
+            -webkit-text-fill-color: transparent;
+        }
+        .serm5{
+            font-weight: bolder;
+            padding-top: 10px;
+            width: 200px;
+            text-align: left;
+            font-size: 18px;
+        }
+        .serm6{
+            padding-top: 10px;
+            font-weight:600px ;
+            font-size: 14px;
+        }
+        .serm7{
+            display: flex;
+            gap: 10px;
+            padding-top: 15px;
+        }
+        .icon1{
+            color: black;
+            font-size: 20px;
+        }
+        .serm8{
+            padding-top: 20px;
+        }
+        .serm8i{
+            background-color: black;
+            color:#FFD0A0;
+            width: 120px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+        .header6i{
+            display: flex;
+            gap: 1px;
+            padding-left: 100px;
+        }
+        .bibble{
+            width: 690px;
+            background-size: cover;
+            height: 420px;
+        }
+        .serm9{
+            display: flex;
+            gap: 10px;
+            padding-top: 20px;
+            padding-left: 990px;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .over{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .foreground{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .lay{
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+        .ftext{
+            position: absolute;
+            z-index:1;
+            color: black;
+            font-style: 24px;
+            top: 50%;
+            ;
+            transform: translate(-50%, -50%);
+        }
+        .header7{
+            padding-top: 5px;
+            padding-left: 1300px;
+        }
+        .header7i{
+            background-color: white;
+            width: 580px;
+            height: 300px;
+            border-bottom:15px solid #FFD0A0;
+            padding: 40px;
+        }
+        .absolute{
+            padding-top: 30px;
+            width: 350px;
+            font-size: 35px;
+            font-weight: bold;  
+        }
+        .absolute1{
+            width: 220px;
+            padding-top: 10px;
+        }
+        .absolute2{
+            padding-top: 20px;
+        }
+        .absolute3{
+            background-color: #FFD0A0;
+            width: 100px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .absquote{
+            display: flex;
+        }
+        .quote{
+            padding-top: 50px;
+            padding-left: 60px;
+        }
+        .header8{
+            height: 690px;
+        }
+        .header8i{
+            padding-top: 100px;
+        }   
+        .header8ii{
+            text-align: center;
+            font-weight:600;
+            font-size: 14px;
+        } 
+        .header8iii{
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            padding-top: 15px;
+        }
+        .header8-2{
+            display: flex;
+            gap: 20px;
+            padding-left: 120px;
+            padding-top: 60px;
+
+        }
+        .header8-2i{
+            background-color: #FFF5EB;
+            width: 200px;
+            padding: 30px;
+            border-bottom: 10px solid #FFD0A0;
+        }
+        .header8-2ii{
+            background: linear-gradient(to bottom, #eb8b2c, rgba(255, 68, 0, 0.945));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 13px;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+        .header8-2iii{
+            width:200px ;
+            font-weight: bold;
+            padding-top: 20px;
+            font-size: 15px;
+        }
+        .header8-2iv{
+            font-weight: 499.9;
+            padding-top: 20px;
+            width: 200px;
+            font-size: 13px;
+        }
+        .header8-2v{
+            padding-top: 30px;
+            font-weight: 500;
+            font-size: 14px;
+
+        }
+        .footer{
+            background-color: #161722;
+            height: 250px;
+            color: white;
+            font-size: 14px;
+            font-weight: 100;
+            padding: 20px;
+            display: flex;
+            gap: 80px;
+        }
+        .footimg{
+            width: 100px;
+            margin: -30px;
+            padding-top: 29px;
+        }
+        .endfont{
+            color: white;
+        }
+        .subfoot{
+            line-height: 30px;
+            padding-left: 50px;
+        }
+        .numb{
+            padding-top: 30px;
+        }
+        .foot{
+            font-weight: bold;
+            padding-top: 28px;
+            font-size: 15px;
+        }
+        .endiword{
+            padding-top: 25px;
+        }
+        .enword{
+            display: flex;
+            padding-top: 28px;
+            gap: 20px;
+        }
+        .con{
+            width: 20px;
+        }
+        .la1{
+            font-size: 25px;
+            font-weight: bold;
+            width: 400px;
+            padding-top: 40px;
+            padding-left: 40px;
+        }
+        .inp-btn{
+            display: flex;
+            padding-top: 60px;
+            padding-left: 36px;
+
+        }
+
+        .inpu{
+            background-color: transparent;
+            padding: 16px;
+            border: 1px solid grey;
+            width: 250px;
+            border-radius: 10px;
+            color: white;
+        }
+        .btnn{
+            background-color:#FFD0A0;
+            color: black;
+            width: 130px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .lang{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="headd">
+        <div class="header">
+            <div class="image">
+                <img class="img" src="img/IMG-20240815-WA0011-removebg-preview.png" alt="">
+            </div>
+            <div class="menu">
+                <a id="active" class="link" href="index.html">HOME</a>
+                <a  class="link" href="about.html">ABOUT US</a>
+                <a class="link" href="sermon.html">SERMON</a>
+                <a class="link" href="blog.html">BLOG</a>
+            
+            <a class="men" href="">
+                <div class="comp">
+                    <div class="contt">
+                        <span class="cont">CONTACT US</span>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        </div>
+    <div class="header1">
+        <div class="txt">
+            <span>WELCOME TO OUR CHURCH, CHRIST MIRACLE CHAPEL</span>
+        </div>
+        <div class="txt1">
+            <h1>BECOME A PART OF OUR COMMUNITY</h1>
+        </div>
+        <a class="men" href="">
+        <div class="bttn"> 
+            <div class="btn">
+                <span>LEARN MORE</span>
+            </div>
+        </div>
+        </a><br>
+        <div class="ttxt2">
+            <div class="txt2">
+                <span>Romans 12: 4-5: For as in one body we have many members, and the members do not all have the same function. so we, thou be many, are one body in Christ, and individually members one of another.</span>
+            </div>
+        </div>
+    </div>
+    <div class="header2">
+        <div class="txt3">
+            <span>SUB-HEADLINE</span>
+        </div>
+        <div class="txt4">
+            <h2>A CHURCH'S THAT RELEVANT</h2>
+        </div>
+        <div class="subhead">
+            <div class="line">
+                <div class="font">
+                    <i class="fa fa-hands-holding"></i>
+                </div>
+                <div class="txt5">
+                    <span>ABOUT US</span>
+                </div>
+                <div class="txt6">
+                    <span>Welcome to our church Christ Miracle Chapel, a warm and inclusive community where faith, love, and service unite to inspire and uplift.</span>
+                </div>
+            </div>
+            <div class="line">
+                <div class="font">
+                    <i class="fa fa-stream"></i>
+                </div>
+                <div class="txt5">
+                    <span>GET INVOLVED</span>
+                </div>
+                <div class="txt6">
+                    <span>Join us in community, faith, and service. Discover volunteer opportunities, connect with others, and grow spiritually together. Get involved today!</span>
+                </div>
+            </div>
+            <div class="line">
+                <div class="font">
+                    <i class="fa fa-hand-holding-heart"></i>
+                </div>
+                <div class="txt5">
+                    <span>GIVING BACK</span>
+                </div>
+                <div class="txt6">
+                    <span>Join us in giving back to the community through volunteer opportunities, donations, and outreach programs. Together, we make a difference.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header3">
+        <div class="txt7">
+            <span>SUB-HEADLINE</span>
+        </div>
+        <div class="jjjj">
+            <h1>LOVE AND COMPASSION</h1>
+        </div>
+        <div class="txt8">
+            <span>At our church, we embrace love and compassion as the foundation of our faith, fostering a welcoming community where everyone is valued, supported, and uplifted in their spiritual journey.</span>
+        </div>
+        <a class="men" href="">
+        <div class="bttn2">
+            <div class="btn2">
+                <span>READ MORE</span>
+            </div>
+        </div>
+        </a>
+        <div class="subhead3">
+            <div class="subhead3-1">
+                <img class="subhead3i" src="img/a-bearded-man-praying-5206040.png" alt="">
+            </div>
+            <div class="subhead3-2">
+                <img class="subhead3ii" src="img/man-and-woman-reading-book-while-sitting-on-pews-8468470.png" alt="">
+            </div>
+            <div class="subhead3-3"> 
+                <img class="subhead3iii" src="img/people-sitting-on-brown-pews-8674151.png" alt="">
+            </div>
+        </div>
+        <div class="header4">
+            <div class="txt9">
+                <span>OUR MISSION & VISION</span>
+            </div>
+            <div class="hh2">
+                <h2>CELEBRATE WITH US</h2>
+            </div>
+            <div class="txt10">
+                <span>Our mission is to share God's love, inspire faith, and serve others. Our vision is to build a welcoming community that reflects Christ's teachings and transforms lives through compassion and service.</span>
+            </div>
+            <div class="txt11">
+                <a class="men" href="">
+               <span class="subtxt11">READ MORE</span>
+               <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header5">
+        <div class="subhead5">
+            <div class="subhead5i">
+                <div class="subhead5ii">
+                    <span>WATCH AND LISTEN</span>
+                </div>
+                <div class="subhead5iii">
+                    <h1>THE BENEFITS OF JOINING OUR CHURCH</h1>
+                </div>
+            </div>
+            <div class="backs">
+                <div class="">
+                    <div class="back">
+                        <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                    </div>
+                    <div class="image3-i">
+                        <img class="image3" src="img/bible.jfif" alt="">
+                    </div>
+                </div>
+            <div class="">
+                <div>
+                    <div class="back1">
+                        <span>HAVE A STRONG RELATIONSHIP WITH GOD</span>
+                    </div>
+                    <div class="">
+                        <img class="image3" src="img/a-statue-holding-a-holy-book-5613134.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <div class="back">
+                        <span>COMMUNE WITH THE HOLY SPIRIT</span>
+                    </div>
+                    <div class="bot">
+                        <img class="image3" src="img/holy ghost1.jfif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div>
+                    <div class="back2">
+                        <span>BEING PREPARED FOR THE COMING OF CHRIST</span>
+                    </div>
+                    <div class="">
+                        <img class="image3" src="img/a-statue-holding-a-holy-book-5613134.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header6">
+        <div class="subhead6">
+            <div>
+                <div class="serm">
+                    <span>WEEKLY SERMONS</span>
+                </div>
+                <div class="serm2">
+                    <h1><span>JOIN US AND BECOME PART OF SOMETHING GREAT</span></h1>
+                </div>
+            </div>
+            <div class="header6i">
+                <div class="serm3">
+                    <div class="serm4">
+                        <span>WEEKLY SERMONS</span>
+                    </div>
+                    <div class="serm5">
+                        <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                    </div>
+                    <div class="serm6">
+                        <span>Explore our sermon library and depen your spiritual journey with us</span>
+                    </div>
+                    <div class="serm7">
+                        <div>
+                        <i class="fa fa-clock icon1"></i>
+                        </div>
+                        <div>
+                            <span>Wednesday 17:30-19:30</span><br>
+                            <span>Thursday 18:00-19:00</span>
+                        </div>
+                    </div>
+                    <div class="serm7">
+                        <div>
+                        <i class="fa fa-location icon1"></i>
+                        </div>
+                        <div>
+                            <span>No 4 Bosun close, Crown estate, Ojodu, Nigeria</span><br>
+                        </div>
+                    </div>
+                    <div class="serm8">
+                        <div class="serm8i">
+                            <span>REGISTER</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="bibble" src="img/3Xmcv5MjZpw.png    " alt="">
+                </div>
+            </div>
+            <div class="serm9">
+                <div>
+                    <span>View all Sermons</span>
+                </div>
+                <div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img class="over" src="img/facade-of-aged-grand-cathedral-with-dome-on-river-shore-5273642.png" alt="">
+        <div class="foreground">
+            <img class="lay" src="img/overlay.png" alt="">
+            <div class="ftext">
+                <div class="header7">
+                    <div class="header7i">
+                        <div class="absquote">
+                            <div class="absolute">
+                                <span>WE WANT TO <br> SERVE THE WORLD <br> AROUND US</span>
+                            </div>
+                            <div class="quote">
+                                <img src="img/Quote icon (1).png" alt="">
+                            </div>
+                        </div>
+                        <div class="absolute1">
+                            <span>Spreading God's love globally, one heart at a time</span>
+                        </div>
+                        <div class="absolute2">
+                            <div class="absolute3">
+                                <span>VISIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header8">
+        <div class="header8i">
+            <div class="header8ii">
+                <span>READ OUR BLOG </span>
+            </div>
+            <div class="header8iii">
+                <span>SHARE, INSPIRE, INNOVATE</span>
+            </div>
+        </div>
+        <div class="header8-2">
+            <div class="header8-2i">
+                <div class="header8-2ii">
+                    <span>FEAR OF GOD</span>
+                </div>
+                <div class="header8-2iii">
+                    <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                </div>
+                <div class="header8-2iv">
+                    <span>The fear of God is a deep reverence and awe for His holiness and power, guiding us to live righteously.</span>
+                </div>
+                <div class="header8-2v">
+                    <span>By PROPHET SAM FOLORUNSHO</span><br>
+                    <span>Sunday 15 August, 2024</span>
+                </div>
+            </div>
+             <div class="header8-2i">
+                <div class="header8-2ii">
+                    <span>BENEFITS OF WISDOM</span>
+                </div>
+                <div class="header8-2iii">
+                    <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                </div>
+                <div class="header8-2iv">
+                    <span>The fear of God is a deep reverence and awe for His holiness and power, guiding us to live righteously.</span>
+                </div>
+                <div class="header8-2v">
+                    <span>By PROPHET SAM FOLORUNSHO</span><br>
+                    <span>Sunday 15 August, 2024</span>
+                </div>
+            </div>
+             <div class="header8-2i">
+                <div class="header8-2ii">
+                    <span>FEAR OF GOD</span>
+                </div>
+                <div class="header8-2iii">
+                    <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                </div>
+                <div class="header8-2iv">
+                    <span>The fear of God is a deep reverence and awe for His holiness and power, guiding us to live righteously.</span>
+                </div>
+                <div class="header8-2v">
+                    <span>By PROPHET SAM FOLORUNSHO</span><br>
+                    <span>Sunday 15 August, 2024</span>
+                </div>
+            </div>
+             <div class="header8-2i">
+                <div class="header8-2ii">
+                    <span>FEAR OF GOD</span>
+                </div>
+                <div class="header8-2iii">
+                    <span>WATCH AND LISTEN TO OUR SERMONS</span>
+                </div>
+                <div class="header8-2iv">
+                    <span>The fear of God is a deep reverence and awe for His holiness and power, guiding us to live righteously.</span>
+                </div>
+                <div class="header8-2v">
+                    <span>By PROPHET SAM FOLORUNSHO</span><br>
+                    <span>Sunday 15 August, 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="subfoot">
+            <div class="foot-img">
+                <img class="footimg" src="img/IMG-20240815-WA0011-removebg-preview.png" alt="">
+            </div>
+            <div>
+                <i class="fa fa-copyright endfont"></i>
+                <span class="endword"> COPYRIGHT WEBSAJAMION 2024</span>
+            </div>
+            <div class="numb">
+                <span>(+234) 81-6263-8041</span>
+            </div>
+            <div>
+                <span>4 BOSUN CLOSE, CROWN ESTATE</span>
+            </div>
+            <div>
+                <span>Folorunshosamson@yahoo.com</span>
+            </div>
+        </div>
+        <div class="subfoot">
+            <div class="foot">
+                <span>Quicklinks</span>
+            </div>
+            <div class="endiword">
+                <span>ABOUT US</span>
+            </div>
+            <div class="numb">
+                <span>SERMONS</span>
+            </div>
+            <div>
+                <span>EVENTS</span>
+            </div>
+            <div>
+                <span>BLOG</span>
+            </div>
+        </div>
+        <div class="subfoot">
+            <div class="foot">
+                <span>Connect</span>
+            </div>
+            <div class="enword">
+                <div>
+                    <a href=""><img class="con" src="img/facebook.png" alt=""></a>
+                </div>
+                <div>
+                    <a href=""><img class="con" src="img/Negative.png" alt=""></a>
+                </div>
+                <div>
+                    <a href=""><img class="con" src="img/Vector.png" alt=""></a>
+                </div>
+            </div>
+         </div>
+         <div>
+            <div class="la1"> 
+                <span>SUBSCRIBE TO GET LATEST UPDATES AND NEWS</span>
+            </div>
+            <div class="inp-btn">
+                <div class="inp">
+                    <input class="inpu" type="email" name="" id="" placeholder="Yourmail@gmail.com">
+                </div>
+                <a href="" class="lang">
+                <div class="bttnn">
+                    <div class="btnn">
+                        <span>SUBSCRIBE</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
