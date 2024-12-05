@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = "Extraordinary";
+        let split = text.slice(0, 5);
+        let pilt = text.slice(5, 8)
+        let ilt = text.slice(5, 13)
+        console.log(split)
+        console.log(pilt)
+        console.log(ilt)
+        console.log(text.toLocaleLowerCase())
+        console.log(text.toLocaleUpperCase())
+        let join = (split.concat(' ', pilt));
+        console.log(join);
+        let oversabi= "                  extraordinary                  "
+        console.log(oversabi.trimEnd())
+        console.log(oversabi.toLocaleUpperCase())
+        let join2 =(join.concat(' ',  ilt))
+        console.log(join2)
+
+        var firstname ="Juwon"
+        var lastname ="Folorunsho"
+        console.log(`Welcome  ${2+2}`)
+        let price ="10"
+        let VAT ="0.25"
+        let total =`Total: ${(price * (1+VAT)).toFixed (2)}`
+        console.log(total);
+    </script>
+</body>
+</html>

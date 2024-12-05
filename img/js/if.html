@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="displayDate" onclick="displayDate()">
+        <span>click</span>
+    </div>
+    <script>
+        // if statments checks if a condition is true
+        let x = 10;
+        if( x < 5) {
+            console.log("x is less than 5");
+        }
+        else if(x == 6){
+            console.log("x is equal to 6");
+        }
+        else if(x == 10){
+            console.log("x is equal to 10");
+        }
+        else{
+            console.log("x is greater than 5");
+        }
+        let money = 200;
+        let breadPrice = 600;
+        if(money < breadPrice){
+            console.log("insufficient balance");
+        }
+        else if(money >= breadPrice){
+            console.log("product purchased")
+        }
+        else{
+            console.log("Go back home");
+        }
+        // switch cases
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day ="sunday"
+                break;
+            case 1:
+                day = "Monday"
+                break;
+            case 2:
+                day = "Tuesday"
+                break;
+            case 3:
+                day = "Wednesday"
+                break;
+            case 4:
+                day = "Thursday"
+                break;
+            case 5:
+                day = "Friday"
+                break;
+            case 6:
+                day = "Saturday"
+                break;
+            
+        }
+
+        console.log("Today is " + day);
+
+        // for loop
+
+        let car = ["volvo", "saab", "lambo"];
+        for(let i = 0; i < car.length; i++) {
+            console.log(car[i]);
+        }
+        // for in
+
+        const person ={
+            firstName: "Oluwajuwon ",
+            lastName: "Folorunsho ",
+            work: "Student ",
+            age: 18
+        }
+        let text ='';
+        for (let x in person){
+            text += person[x] + '';
+            console.log(text)
+        }
+        console.log(person)
+        
+        // assignment
+        function displayDate(){
+            let x ="10"
+            console.log(x)
+            document.getElementById('displayDate').innerHTML=Date()
+        }
+    </script>
+    
+</body>
+</html>

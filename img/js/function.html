@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle-content{
+            display: none;
+            padding: 10px;
+            background-color: orange;
+            margin: 10px;
+        }
+        .wow{
+            padding: 10px;
+            background-image: linear-gradient(to right, orange, orangered);
+            border-radius: 10px;
+            border: 1px orange;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        let x = (10, 100);
+        console.log(x);
+        function click(a, b){
+            return a/b;
+            
+        }
+        
+        function toggleContent(){
+            var toggle = document.getElementById("content");
+            if (content.style.display === "none") {
+            content.style.display = "block";
+            } else{
+                content.style.display = "none";
+            }
+        }
+        function convertToDecimal() {
+            var percentage = document.getElementById("percentageInput").value;
+            var decimal = parseFloat(percentage) /100;
+            document.getElementById("result").innerText = "Decimal:" + decimal;
+        }
+    </script>
+<button onclick="toggleContent()">Click this</button>
+<div id="content" class="toggle-content">
+   come on  
+</div><br><br><br><br>
+
+<label for="convert">Enter Percentage:</label><br>
+<input type="text" id="percentageInput">
+<button class="wow" onclick="convertToDecimal()">convert</button><br>
+
+
+<p id="result"></p>
+</body>
+</html>
