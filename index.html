@@ -7,17 +7,18 @@
     <link rel="icon" type="image/x-icon" href="../img/IMG-20240815-WA0011.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
     <style>
-       @media (max-width: 600px){
+     
+     @media (max-width: 600px){
       body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .navbar {
-  width: 500px;
+  width: 500px  ;
   background-color:black;
   padding: 10px 0;
-  display: inline-block;
+
 }
  a:hover{
     color:#ffc081;
@@ -45,7 +46,7 @@
   top: 100%;
   left: 0;
   width: 100%; /* Matches navbar size */
-  background-color: #ffc081;
+  background-color:#ffc081;
   overflow: hidden;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -60,7 +61,7 @@
 
 .dropdown-content a:hover {
   background-color:black;
-  color: white;
+  color:white;
 }
 
 /* Show dropdown when hovering over the menu area */
@@ -91,9 +92,10 @@
 }
 .links{
   padding-top: 20px;
-  padding-left: 30%;
+  padding-left: 40%;
   display: flex;
   gap: 20px;
+  font-size: 17px;
 }
 .llink{
   text-decoration: none;
@@ -103,7 +105,7 @@
     color: #ffc081;
    }
    .fa{
-    font-size: 20px;
+    font-size: 30px;
    }
    .header1{
     background-image: url(img/a-woman-of-south-asian-descent-dressed.jpeg);
@@ -111,9 +113,177 @@
     width:500px;
     background-size: cover;
    }
+   .int{
+    padding-left: 30px;
+   }
+  .intro{
+    color: white;
+    padding-top: 30px;
+   
+    width: 250px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .intro1{
+    color: white;
+    padding-top: 10px;
+    
+    width: 220px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .intro2{
+    color: white;
+    padding-top: 10px;
+    width: 290px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .int-link{
+    padding-top: 50px;
 
+  }
+  .int-link1{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    background-color: #ffc081;
+    width: 100px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .header2{
+    
+    padding-top: 20px;
+    
+    
+  }
+  .second{
+    padding-left: 140px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    width: 300px;
+  }
+  .icon{
+    padding-top: 10px;
+   
+  }
+  .slide-right-left{
+    width: 220px;
+    font-weight: 600;
+    height: 150px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 6px;
+    font-size: 18px;
+
+    right: -300px;
+    animation: slideLeft 3s forwards;
+  }
+  @keyframes slideLeft {
+    0%{
+      right: -300px;
     }
-          @media (min-width: 601px) and (max-width:1240px){
+    100% {
+      right: 5%;
+      transform: translate(60%);
+    }
+  }
+  .slide-left-right{
+    
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    left: -300px;
+    animation: slideRight 2s forwards;
+  }
+  @keyframes slideRight {
+    0%{
+      left: -300px;
+    }
+    100% {
+      left: 10%;
+      transform: translate(-0%);
+    }
+  }
+  .slides{
+    padding-top: 200px;
+    
+  }
+  .slide-left-rights{
+    width: 300px;
+    font-weight: 600;
+    height: 250px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: -300px;
+    font-size: 20px;
+    animation: slideRights 4s forwards;
+  }
+  @keyframes slideRights {
+    0%{
+      left: -300px;
+    }
+    100% {
+      left: 29%;
+      transform: translate(-0%);
+    }
+  }
+  .icon2{
+    border-radius: 50px;
+    background-color: white;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+  }
+  .header3{
+    background-color: #ddd;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+    height: 500px;
+  }
+  .header3i{
+    padding-top: 300px;
+    padding-left: 40px;
+  }
+  .img1{
+  padding-left: 90px;
+  padding-top: 20px;
+    
+  }
+  .txt{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+  }
+  .imgg1{
+    width: 200px;
+     border-radius:35%;
+     border:4px solid white;
+  }
+
+  .son{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  }
+  
+
+  @media (min-width: 601px) and (max-width:1240px){
       body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -197,7 +367,7 @@
 }
 .links{
   padding-top: 20px;
-  padding-left: 45%;
+  padding-left: 40%;
   display: flex;
   gap: 20px;
 }
@@ -219,6 +389,7 @@
    }
     }
    
+
     </style>
 </head>
 <body>
@@ -241,7 +412,59 @@
         </div>
     </nav>
     <div class="header1">
-
+      <div class="int">
+        <div class="intro">
+          <span>Welcome to Christ’s Miracle Chapel</span>
+        </div>
+        <div class="intro1">
+          <span>Become A Part Of Our Community</span>
+        </div>
+        <div class="intro2">
+          <span>Romans 12: 5:we, though be many, are one body in Christ, and individually members one of another.</span>
+        </div>
+        <div class="int-link">
+          <a class="int-link1" href="about.html">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="second">
+      <span>A One Family Church</span>
+    </div>
+    <div class="header2">
+      <div class="slide-left-right">
+        <div class="icon">
+          <i class="fa fa-hands-holding icon2"></i>
+        </div>
+        <div>Welcome to our church Christ Miracle Chapel, a warm and inclusive community where faith, love, and service unite to inspire and uplift.</div>
+      </div>
+      <div class="slide-right-left">
+        <div class="icon">
+          <i class="fa fa-stream"></i>
+        </div>
+        <div>
+          Join us in community, faith, and service. Discover volunteer opportunities, connect with others, and grow spiritually together. Get involved today!
+        </div>
+      </div>
+      <div class="slides">
+        <div class="slide-left-rights">
+          <div class="icon">
+            <i class="fa fa-hand-holding-heart icon2"></i>
+          </div>
+          <div>Jesus Christ is our sole founder and ultimate role model, embodying love, humility, and sacrifice. His teachings inspire faith, guiding us to live with purpose, compassion, and integrity, reflecting God's grace in every aspect of our lives.</div>
+      </div>
+    </div>
+    <div class="header3i">
+      <div class="header3">
+        <div class="txt">
+          <span>Meet Our Leader</span>
+        </div>
+        <div class="img1">
+          <img class="imgg1" src="img/IMG-20240926-WA0063.jpg" alt="">
+        </div>
+        <div class="son">
+          <span>Prophet Samson Folorunsho </span>
+        </div>
+      </div>
     </div>
 </body>
 </html>
