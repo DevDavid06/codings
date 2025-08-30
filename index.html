@@ -1,470 +1,828 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | C.M.C</title>
-    <link rel="icon" type="image/x-icon" href="../img/IMG-20240815-WA0011.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-     
-     @media (max-width: 600px){
-      body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+        *{ 
+            margin:0; 
+            padding:0; 
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(img/beautiful-white-background.png);
+            background-position: center;
+            background-size: cover;
+        }
 
-.navbar {
-  width: 500px  ;
-  background-color:black;
-  padding: 10px 0;
+        .content{
+            height:100dvh;
+            background-image:url(img/ChatGPT\ Image\ Aug\ 24\,\ 2025\,\ 06_39_44\ PM.png);
+        }
 
-}
- a:hover{
-    color:#ffc081;
-}
-.menu {
-  position: relative;
-  display: flex;
-   /* Optional: for centering */
-}
+        .header{
+            display: flex;
+            gap: 50px;
+            padding-left: 100px;
+            padding-top: 10px;
+        }
+        .cont{
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 35px;
+            color:#473BF0;
+        }
+        .cont1{
+            display: flex;
+            gap: 40px;
+            font-size: 15px;
+            font-weight: 700;
+            padding-top: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: all 0.6s ease;
+        }
+        a:hover{ color: #473BF0; }
+        .cont2{ padding-left: 300px; }
+        .cont3{
+            background-color: #473BF0;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #473BF0;
+            transition: all 0.6s ease;
+            cursor: pointer;
+        }
+        .cont3:hover{ background-color: #2c23aab0; }
 
-.dropdown-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding-left: 50px;
-  font-size: 16px;
-}
-.dropdown-btn:hover{
-    color:#ffc081;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%; /* Matches navbar size */
-  background-color:#ffc081;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* ===== SLIDESHOW (NEW) ===== */
+        .slideshow-container{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: calc(100dvh - 70px); /* full hero minus header area */
+        }
+        .slides{
+            display: flex;
+            height: 100%;
+            transition: transform 0.9s ease-in-out;
+            will-change: transform;
+        }
+        .slide{
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 50px 20px;
+        }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color:black;
-  color:white;
-}
-
-/* Show dropdown when hovering over the menu area */
-.dropdown-btn:hover + .dropdown-content, .dropdown-content:hover {
-  display: block;
-  animation: slideDown 0.3s ease-in-out;
-}
-
-/* Slide-down animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.img{
-  width: 100px;
-
-}
-.imgg{
-  padding-left: 30px;
-  margin: -30px;
-  padding-top: 15px;
-}
-.links{
-  padding-top: 20px;
-  padding-left: 40%;
-  display: flex;
-  gap: 20px;
-  font-size: 17px;
-}
-.llink{
-  text-decoration: none;
-  color: white;
-}
-#active{
-    color: #ffc081;
-   }
-   .fa{
-    font-size: 30px;
-   }
-   .header1{
-    background-image: url(img/a-woman-of-south-asian-descent-dressed.jpeg);
-    height: 450px;
-    width:500px;
-    background-size: cover;
-   }
-   .int{
-    padding-left: 30px;
-   }
-  .intro{
-    color: white;
-    padding-top: 30px;
-   
-    width: 250px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .intro1{
-    color: white;
-    padding-top: 10px;
+        /* Your original hero inner layout reused inside each slide */
+        
+        .text1{
+            color:#F64B4B;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .text2-{ width: 400px; padding-top: 20px; color: white; }
+        .text2{ font-size:40px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; }
+        .text3-1{ padding-top: 20px; width: 400px; }
+        .text3{ font-weight: 400; opacity: 0.7; color: white; }
+        .bodyii{ padding-top: 20px; }
+        .text4{
+            background-color: #473BF0;
+            padding: 10px;
+            font-size: 17px;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid #473BF0;
+            transition: all 0.6s ease;
+            cursor: pointer;
+        }
+        .text4:hover{ background-color: #2921a3; }
     
-    width: 220px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .intro2{
-    color: white;
-    padding-top: 10px;
-    width: 290px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .int-link{
-    padding-top: 50px;
+        .text5{ width: 400px; max-width: 90vw; }
 
-  }
-  .int-link1{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    background-color: #ffc081;
-    width: 100px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-  }
-  .header2{
-    
-    padding-top: 20px;
-    
-    
-  }
-  .second{
-    padding-left: 140px;
-    padding-top: 20px;
-    font-weight: bold;
-    font-size: 25px;
-    width: 300px;
-  }
-  .icon{
-    padding-top: 10px;
-   
-  }
-  .slide-right-left{
-    width: 220px;
-    font-weight: 600;
-    height: 150px;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    padding-top: 6px;
-    font-size: 18px;
+        .dots{
+            position: absolute;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .dot{
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+        }
+        .dot.active{ background: rgba(255,255,255,0.9); }
 
-    right: -300px;
-    animation: slideLeft 3s forwards;
-  }
-  @keyframes slideLeft {
-    0%{
-      right: -300px;
-    }
-    100% {
-      right: 5%;
-      transform: translate(60%);
-    }
-  }
-  .slide-left-right{
-    
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 600;
-    left: -300px;
-    animation: slideRight 2s forwards;
-  }
-  @keyframes slideRight {
-    0%{
-      left: -300px;
-    }
-    100% {
-      left: 10%;
-      transform: translate(-0%);
-    }
-  }
-  .slides{
-    padding-top: 200px;
-    
-  }
-  .slide-left-rights{
-    width: 300px;
-    font-weight: 600;
-    height: 250px;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    left: -300px;
-    font-size: 20px;
-    animation: slideRights 4s forwards;
-  }
-  @keyframes slideRights {
-    0%{
-      left: -300px;
-    }
-    100% {
-      left: 29%;
-      transform: translate(-0%);
-    }
-  }
-  .icon2{
-    border-radius: 50px;
-    background-color: white;
-    width: 30px;
-    padding: 5px;
-    text-align: center;
-  }
-  .header3{
-    background-color: #ddd;
-    width: 400px;
-    border-radius: 20px;
-    padding: 10px;
-    height: 500px;
-  }
-  .header3i{
-    padding-top: 300px;
-    padding-left: 40px;
-  }
-  .img1{
-  padding-left: 90px;
-  padding-top: 20px;
-    
-  }
-  .txt{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    padding-top: 10px;
-  }
-  .imgg1{
-    width: 200px;
-     border-radius:35%;
-     border:4px solid white;
-  }
+        .content2{
+            padding-top: 70px;
+            background-image: url(img/white-background.png);
+            background-position: bottom;
+            background-size: cover;
+            height: 100dvh;
+        }
+        .contt2{ text-align: center; }
+        .cont2-0{ color:#F64B4B; font-size: 18px; }
+        .cont2-1{
+            padding-top: 10px;
+            text-align: center;
+            width: 390px;
+            font-size: 25px;
+            padding-left: 490px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .cont2-2{
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont2-3{
+            background-color: #68D585;
+            width: 300px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .image{ width: 70px; }
+        .word{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .cont2-4{
+            width: 220px;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:lighter;
+            padding-left: 10px;
+            opacity: 0.8;
+            color:white;    
+        }
+        .contt1{ color: white; margin-top: 40px; }
+        .cont11{ padding-top: 12px; }
+        .cont3-1{
+            background-color:#473BF0;
+            width: 300px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .cont3-2{
+            background-color:#F64B4B;
+            width: 300px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .slide-up-section{ opacity:0; transform: translateY(100px); transition: opacity 2s ease, transform 2s cubic-bezier(.23,1.01,.32,1); }
+        .slide-up-section.visible{ opacity:1; transform: translateY(0); }
 
-  .son{
-    text-align: center;
-    padding-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
-  }
+        .level4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-image: url(img/BG\ \(1\).png);
+        }
+        .slide-up-section4{ opacity:0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.23,1.01,.32,1); }
+        .slide-up-section4.visible{ opacity:1; transform: translateY(0); }
 
-  }
-  
+        .level4i1{ width: 150px; }
+        .level4i2{ width: 100px; }
+        .level4i3{ padding-left: 50px; }
+        .level4ii{ font-weight: bold; width: 420px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
+        .level4iii1{ font-size: 15px; font-weight: bolder; font-family: Arial, Helvetica, sans-serif; }
+        .level4iii2{ font-size: 15px; color:darkgray; font-family: Arial, Helvetica, sans-serif; }
 
-  @media (min-width: 601px) and (max-width:1240px){
-      body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+        .level5{
+            padding-top: 50px;
+            margin-top: 50px;
+            padding-left: 300px;
+            height: 100dvh;
+            background-image: url(img/ChatGPT\ Image\ Aug\ 24\,\ 2025\,\ 06_39_44\ PM.png);
+        }
+        .slide-up-section5{ opacity:0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.23,1.01,.32,1); }
+        .slide-up-section5.visible{ opacity:1; transform: translateY(0); }
+        .level5ii{ color: orangered; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; }
+        .level5iii{ padding-top: 20px; font-size: 20px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; width: 320px; color: white; }
 
-.navbar {
-  width: 100%;
-  background-color:black;
-  padding: 10px 0;
-  display: inline-block;
-}
- a:hover{
-    color:#ffc081;
-}
-.menu {
-  position: relative;
-  display: flex;
-   /* Optional: for centering */
-}
+        .level6{ display: flex; padding-top: 50px; gap: 50px; }
+        .level6i{ padding-top: 50px; }
+        .l6i1{ width: 270px; }
+        .l6ii1{ width: 200px; }
+        .l6ii2{
+            width: 400px;
+            display: flex;
+            position: absolute;
+            font-size: 18px;
+            color:white;
+            padding-top: 80px;
+        }
+        .level6iii{ padding-top: 60px; }
+        .l6iii1{ width: 100px; }
 
-.dropdown-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding-left: 50px;
-  font-size: 16px;
-}
-.dropdown-btn:hover{
-    color:#ffc081;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%; /* Matches navbar size */
-  background-color: #f1f1f1;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        .level7{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/BG\ \(1\).png);
+            height: 30dvh;
+            margin-top: 50px;
+        }
+        .l71i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
+        .l71ii{ width: 250px; text-align: center; padding-top: 15px; opacity: 0.7; font-size: 20px; }
+        .l72i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
+        .l72ii{ width: 250px; text-align: center; padding-top: 15px; opacity: 0.7; font-size: 20px; }
+        .l73i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
+        .l73ii{ width: 250px; text-align: center; font-size: 20px; padding-top: 15px; opacity: 0.7; }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-}
+        .level8{
+            background-image: url(img/white-background.png);
+            height: 100dvh;
+            background-position: center;
+            background-size: cover;
+        }
+        .l81{ text-align: center; padding-top: 90px; }
+        .l81i{ color: orangered; font-size: 10px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; opacity: 0.8; }
+        .l81ii{
+            padding-top: 20px;
+            font-size: 20px;
+            padding-left: 520px;
+            width: 300px;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-.dropdown-content a:hover {
-  background-color:black;
-  color: #ffc081;
-}
+        .level9{ display: flex; justify-content: center; }
+        .l90{ display: flex; gap: 20px; padding-top: 50px; }
+        .l91-i{ width: 50px; }
+        .l91ii{ font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+        .l91iii{
+            padding-top: 20px;
+            width: 250px;
+            font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+            font-weight: bold;
+            opacity: 0.5;
+            font-size: 18px;
+        }
 
-/* Show dropdown when hovering over the menu area */
-.dropdown-btn:hover + .dropdown-content, .dropdown-content:hover {
-  display: block;
-  animation: slideDown 0.3s ease-in-out;
-}
+        .level10{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-image: url(img/BG\ \(1\).png);
+            height: 30dvh;
+        }
+        .l10i{ font-weight: bold; }
+        .l10ii{ padding-top: 20px; width: 450px; opacity: 0.5; font-size: 18px; font-weight: 550; }
+        .l10iii{ padding-left: 250px; padding-top: 25px; }
+        .l10iv{
+            background-color: white;
+            color: #473BF0;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #473BF0;
+            font-weight: 700;
+            font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+            transition: all 0.6s ease;
+            cursor: pointer;
+        }
+        .l10iv:hover{
+            background-color: #473BF0;
+            color: white;
+            transform: translateY(-2px);
+            border: 1px solid white;
+        }
 
-/* Slide-down animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.img{
-  width: 100px;
+        .level11{
+            margin-top: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/BG\ \(2\).png);
+            padding-top: 19px;
+        }
+        .l11{ color: orangered; font-family: Arial, Helvetica, sans-serif; font-weight: 550; font-size: 15px; }
+        .l11i{
+            width: 290px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 30px;
+            text-align: center;
+            font-size: large;
+            color: white;
+        }
 
-}
-.imgg{
-  padding-left: 30px;
-  margin: -30px;
-  padding-top: 15px;
-}
-.links{
-  padding-top: 20px;
-  padding-left: 40%;
-  display: flex;
-  gap: 20px;
-}
-.llink{
-  text-decoration: none;
-  color: white;
-}
-#active{
-    color: #ffc081;
-   }
-   .fa{
-    font-size: 20px;
-   }
-   .header1{
-    background-image: url(img/woman-in-orange-coat-with-black-and-brown-scarf-5418305.png);
-    height: 300px;
-    width: 100%;
-    background-size: cover;
-   }
-    }
-   
+        .level12{
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            background-image: url(img/BG\ \(2\).png);
+            color: white;
+            padding-bottom: 30px;
+        }
+        .l12i{ width: 300px; }
+        .l12ii{ padding-top: 20px; padding-left: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 500; font-size: 11px; opacity: 0.8; }
+        .l12iii{ padding-top: 10px; padding-left: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 550; font-size: 15px; }
+        .l12iv1{ padding-top: 40px; }
+        .l12iv2{ width: 300px; }
+        .endl12{ display: flex; justify-content: center; padding: 20px; text-align: center; }
+        .endl12 a{
+            text-align: center; color: white; width: 200px; padding: 10px;
+            background-color: #2921a3; font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+        }
+        .endl12 a:hover{ background-color: #473BF0; transition: all 0.6s ease; transform: scaleX(1.1); }
 
+        .level13{ background-image: url(img/BG\ \(1\).png); height: 480px; }
+        .l13i{
+            padding-top: 100px; text-align: center; color: #68D585;
+            font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 550; padding-right: 35px;
+        }
+        .l13ii{
+            color: white; font-family: Arial, Helvetica, sans-serif; padding-top: 50px; width: 400px;
+            text-align: center; padding-left: 450px; font-size: 18px;
+        }
+        .l13iii{ padding-left: 620px; padding-top: 30px; }
+        .l13iv{
+            text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px; padding-right: 15px; font-size: 13px;
+        }
+        .l13v{
+            text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px; padding-right: 15px; font-size: 11px; opacity: 0.6;
+        }
+
+        .level14{ background-image: url(img/BG\ \(2\).png); height: 600px; }
+        .level14i{ padding-top: 50px; display: flex; padding-left: 260px; }
+        .l14i{ color: white; padding-top: 20px; }
+        .l14ii{ font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
+        .l14iii{ width: 350px; padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
+        .l14iv{ padding-left: 250px; padding-top: 35px; }
+        .l14v{
+            background-color: #473BF0; color: white; padding: 8px; border-radius: 6px;
+            border: 1px solid #473BF0; font-size: 15px; cursor: pointer;
+        }
+        .l14v:hover{ background-color: #2921a3; transition: all 0.6s ease; transform: translateY(-2px); }
+        .down{ padding-top: 60px; width: 740px; padding-left: 260px; opacity: 0.4; }
+
+        .footer{
+            display: flex; gap: 50px; color: white; padding-top: 100px; padding-left: 60px;
+        }
+        .level15{ padding-left: 200px; }
+        .l15{ font-size: 20px; color: white; }
+        .l15i{ width: 250px; opacity: 0.4; padding-top: 20px; }
+        .l15ii{ padding-top:40px; }
+        .l15iii{ width: 100px; }
+        p{ font-size: 15px; opacity: 0.7; }
+        .last{ font-size: 18px; margin-bottom: 5px; }
+        .ttt{ color: white; }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-    
-        <div class="menu">
-          <div class="imgg">
-            <img class="img" src="img/IMG-20240815-WA0011-removebg-preview.png" alt="">
-           </div>
-          <button class="dropdown-btn"><i class="fa fa-bars"></i></button>
-          <div class="dropdown-content">
-            <a href="sermon.html">Sermons</a>
-            <a href="blog.html">Blogs</a>
-            <a href="contact.html">Contact Us</a>
+
+    <!-- ===== HERO ===== -->
+    <div class="content">
+      <div class="header">
+          <span class="cont">ShadePro</span>
+          <div class="cont1">
+              <a href="">Demos</a>
+              <a href="">Pages</a>
+              <a href="">support</a>
+              <a href="">Contact</a>
           </div>
-          <div class="links">
-            <a id="active" class="llink" href="">Home</a>
-            <a class="llink" href="">About</a>
+          <div class="cont2">
+              <button class="cont3">Get started a project</button>
           </div>
-        </div>
-    </nav>
-    <div class="header1">
-      <div class="int">
-        <div class="intro">
-          <span>Welcome to Christ’s Miracle Chapel</span>
-        </div>
-        <div class="intro1">
-          <span>Become A Part Of Our Community</span>
-        </div>
-        <div class="intro2">
-          <span>Romans 12: 5:we, though be many, are one body in Christ, and individually members one of another.</span>
-        </div>
-        <div class="int-link">
-          <a class="int-link1" href="about.html">Learn More</a>
-        </div>
       </div>
-    </div>
-    <div class="second">
-      <span>A One Family Church</span>
-    </div>
-    <div class="header2">
-      <div class="slide-left-right">
-        <div class="icon">
-          <i class="fa fa-hands-holding icon2"></i>
-        </div>
-        <div>Welcome to our church Christ Miracle Chapel, a warm and inclusive community where faith, love, and service unite to inspire and uplift.</div>
-      </div>
-      <div class="slide-right-left">
-        <div class="icon">
-          <i class="fa fa-stream"></i>
-        </div>
-        <div>
-          Join us in community, faith, and service. Discover volunteer opportunities, connect with others, and grow spiritually together. Get involved today!
-        </div>
-      </div>
-      <div class="slides">
-        <div class="slide-left-rights">
-          <div class="icon">
-            <i class="fa fa-hand-holding-heart icon2"></i>
+
+      <!-- SLIDESHOW START -->
+      <div class="slideshow-container">
+        <div class="slides">
+          <!-- Slide 1 (with typing effect) -->
+          <div class="slide">
+            <div class="bodyi">
+              <span class="text1">Let's shift your business</span><br>
+              <div class="text2-">
+                <span id="typing" class="text2"></span><br>
+              </div>
+              <div class="text3-1">
+                <span class="text3">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</span><br>
+              </div>
+              <div class="bodyii">
+                  <button class="text4">Get started a project</button>
+              </div>
+            </div>
+            <div class="bodyiii">
+                <img class="text5" src="img/Image.png" alt="">
+            </div>
           </div>
-          <div>Jesus Christ is our sole founder and ultimate role model, embodying love, humility, and sacrifice. His teachings inspire faith, guiding us to live with purpose, compassion, and integrity, reflecting God's grace in every aspect of our lives.</div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="bodyi">
+              <span class="text1">Creative Designs</span><br>
+              <div class="text2-">
+                <span class="text2">We Build Stunning Graphics</span><br>
+              </div>
+              <div class="text3-1">
+                <span class="text3">Your brand deserves unique and eye-catching visuals tailored just for you.</span><br>
+              </div>
+              <div class="bodyii">
+                  <button class="text4">Explore Designs</button>
+              </div>
+            </div>
+            <div class="bodyiii">
+                <img style="width: 600px;" class="text5" src="img/ConsoleDelivery.png" alt="">
+            </div>
+          </div>
+
+          
+        <!-- dots (optional) -->
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
       </div>
+      <!-- SLIDESHOW END -->
     </div>
-    <div class="header3i">
-      <div class="header3">
-        <div class="txt">
-          <span>Meet Our Leader</span>
+
+    <!-- ===== REST OF YOUR ORIGINAL PAGE ===== -->
+    <div class="content2">
+        <div class="contt2">
+        <span class="cont2-0">Our services</span>
         </div>
-        <div class="img1">
-          <img class="imgg1" src="img/IMG-20240926-WA0063.jpg" alt="">
+        <div class="cont2-1">
+            <span>We provide great services to our customers based on needs</span>
         </div>
-        <div class="son">
-          <span>Prophet Samson Folorunsho </span>
+        <div class="cont2-2 slide-up-section">
+            <div class="cont2-3">
+                <img class="image" src="img/Designer-rafiki.png" alt=""><br><br>
+                <span class="word">Graphic Design</span><br>
+                <div class="cont2-4">
+                <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+                </div>
+                <div class="contt1">
+                <a class="ttt"  href=""><span>Learn more</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
         </div>
-      </div>
+            <div class="cont3-1">
+                <img class="image" src="img/Programming-rafiki.png" alt=""><br><br>
+                <span class="word">Web Development</span><br>
+                <div class="cont2-4">
+                <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+                </div>
+                <div class="contt1">
+                <a class="ttt" href=""><span>Learn more</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="cont3-2">
+                <img class="image" src="img/Designer-rafiki.png" alt=""><br><br>
+                <span class="word">Content Writing</span><br>
+                <div class="cont2-4">
+                <span>With  lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+                </div>
+                <div class="contt1">
+                <a  class="ttt" href=""><span>Learn more</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>  
+        </div>
     </div>
+
+    <div class="level4">
+        <div class="level4i">
+            <img class="level4i1" src="img/Oval (1).png" alt="">
+        </div>
+        <div class="level4i3">
+            <img class="level4i2" src="img/Stars.png" alt=""><br><br>
+            <div class="level4ii slide-up-section4">
+                <span>"OMG! I cannot believe that i have got a brand new landing page after getting Albino. It was super easy to edit and publish."</span>
+            </div><br><br>
+            <div class="level4iii slide-up-section4">
+                <span class="level4iii1">Franklin Hicks</span>
+                <span class="level4iii2">Web Developer</span>
+            </div>
+        </div>
+    </div>
+   
+    <hr width="890px">
+    <div class="level5">
+        <div class="level5i">
+            <div class="level5ii"> 
+            <span class="slide-up-section5">Our Story</span>
+            </div>
+            <div class="level5iii">
+            <span class="slide-up-section5">We know how everything works and why your business is failing over and over again.</span>
+            </div>
+        </div>
+        <div class="level6">
+        <div class="level6i">
+        <img class="l6i1" src="img/1.png" alt="">
+        </div>
+        <div class="level6ii">
+            <img class="l6ii1" src="img/2.png" alt="">
+            <div class="l6ii2">
+            <span class="slide-up-section5">We share common trends and strategies for improving your rental income and making sure you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+            </div>
+        </div>
+        <div class="level6iii">
+            <img class="l6iii1" src="img/3.png" alt="">
+        </div>
+        </div>
+    </div>
+
+    <div class="level7">
+        <div class="l71">
+            <div class="l71i"><span>1M+</span></div>
+            <div class="l71ii"><span>Customers visit Omega every month to get their service done.</span></div>
+        </div>
+         <div class="l72">
+            <div class="l72i"><span>92%</span></div>
+            <div class="l72ii"><span>Satisfaction rate comes from our awesome customers.</span></div>
+        </div>
+        <div class="l73">
+            <div class="l73i"><span>4.9/5.0</span></div>
+            <div class="l73ii"><span>Average customers ratings we have got all over internet.</span></div>
+        </div>
+    </div>
+
+    <div class="level8">
+        <div class="l81">
+            <div class="l81i"><span>WHY CHOOSE US</span></div>
+            <div class="l81ii"><span>People choose us because we serve the best for everyone</span></div>
+        </div>
+        <div class="level9">
+            <div class="l90">
+            <div class="l91"><img class="l91-i" src="img/Icon (2).png" alt=""></div>
+            <div class="l91i">
+            <div class="l91ii slide-up-section5"><span>Dedicated project manager</span></div>
+            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+            </div>
+            </div>
+            <div class="l90">
+            <div class="l91"><img class="l91-i" src="img/Icon.png" alt=""></div>
+            <div class="l91i">
+            <div class="l91ii slide-up-section5"><span>Organized task</span></div>
+            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+            </div>
+            </div>
+        </div>
+        <div class="level9">
+            <div class="l90">
+            <div class="l91"><img class="l91-i" src="img/Icon (1).png" alt=""></div>
+            <div class="l91i">
+            <div class="l91ii slide-up-section5"><span>Easy feedback sharing</span></div>
+            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+            </div>
+            </div>
+            <div class="l90">
+            <div class="l91"><img class="l91-i" src="img/Icon (3).png" alt=""></div>
+            <div class="l91i">
+            <div class="l91ii slide-up-section5"><span>Never miss deadline</span></div>
+            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+            </div>
+            </div>
+        </div><br><br><br><br><br>
+        <hr width="890px" >
+        <div class="level10">
+            <div class="l10">
+                <div class="l10i"><span>Ready to launch your next project?</span></div>
+                <div class="l10ii slide-up-section5"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
+            </div>
+            <div class="l10iii"><button class="l10iv">Get started a project</button></div>
+        </div>
+    </div>
+
+  <div class="G11">
+    <div class="level11">
+        <div class="l11"><span>Case studies</span></div>
+        <div class="l11i"><span>Our work describe why we are the best in the business</span></div>
+    </div>
+    <div class="level12">
+        <div class="Level12i">
+            <div class="level12ii">
+                <div class="l12"><img class="l12i" src="img/Img.png" alt=""></div>
+                <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
+                <div class="l12iii slide-up-section5"><span>Aura Branding Design</span></div>
+            </div>
+            <div class="l12iv">
+                <div class="l12iv1"><img class="l12iv2" src="img/Img (3).png" alt=""></div>
+                <div class="l12ii slide-up-section5"><span>Web development</span></div>
+                <div class="l12iii slide-up-section5"><span>Gradient Website Development</span></div>
+            </div>
+        </div>
+        <div class="Level12i">
+            <div class="level12ii">
+                <div class="l12"><img class="l12i" src="img/Img (1).png" alt=""></div>
+                <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
+                <div class="l12iii slide-up-section5"><span>AB.S Snack Packaging</span></div>
+            </div>
+            <div class="l12iv">
+                <div class="l12iv1"><img class="l12iv2" src="img/Img (2).png" alt=""></div>
+                <div class="l12ii slide-up-section5"><span>Content Writing</span></div>
+                <div class="l12iii slide-up-section5"><span>Magazine Content Writing</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="endl12"><a href="#">See all works ➡</a></div>
+  </div>
+
+  <div class="level13">
+    <div class="l13i"><span>TESTIMONIAL</span></div>
+    <div class="l13ii"><span>“Simply the best. Better than all the rest. I'd recommend this product to beginners and advanced users.”</span></div>
+    <div class="l13iii"><img src="img/Oval (2).png" alt=""></div>
+    <div class="l13iv"><span>Ian Klein</span></div>
+    <div class="l13v"><span>Digital Marketer</span></div>
+  </div>
+
+  <div class="level14">
+   <div class="level14i">
+    <div class="l14i slide-up-section5">
+        <div class="l14ii"><span>Ready to launch your next project?</span></div>
+        <div class="l14iii"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
+    </div>
+    <div class="l14iv"><a href=""><button class="l14v">Get started a project</button></a></div>
+   </div>
+   <div class="down"><hr></div>
+   <div class="footer">
+        <div class="level15 slide-up-section5">
+            <div class="l15"><span>Brainwave.io</span></div>
+            <div class="l15i slide-up-section5"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
+            <div class="l15ii"><img class="l15iii" src="img/Social.png" alt=""></div>
+        </div>
+        <div class="slide-up-section5">
+            <div class="last"><span>Company</span></div>
+            <p>About us</p><p>Contact us</p><p>Careers</p><p>press</p>
+        </div>
+        <div class="slide-up-section5">
+            <div class="last "><span>Product</span></div>
+            <p>Features</p><p>Pricing</p><p>News</p><p>Help desk</p><p>Support</p>
+        </div>
+        <div class="slide-up-section5">
+            <div class="last"><span>Services</span></div>
+            <p>Digital Marketing</p><p>Content Writing</p><p>SEO for Business</p><p>Ui Design</p>
+        </div>
+        <div class="slide-up-section5">
+            <div class="last"><span>Legal</span></div>
+            <p>Privacy policy</p><p>Terms and Conditions</p><p>Return polices</p>
+        </div>
+   </div>
+ </div>
+
+ <script>
+    /* ===== Typing Effect (Slide 1) ===== */
+    document.addEventListener('DOMContentLoaded', function(){
+      const words = ["Your Business.", "Your Website.", "Your Brand.", "Shift Your Business Fast With ShadePro", "Building Smart Tech Solutions"];
+      let i = 0;
+      let timer;
+
+      function typingEffect() {
+          const el = document.getElementById('typing');
+          if(!el) return;
+          let word = words[i].split("");
+          let loopTyping = function() {
+              if (word.length > 0) {
+                  el.innerHTML += word.shift();
+              } else {
+                  deletingEffect();
+                  return;
+              }
+              timer = setTimeout(loopTyping, 200);
+          };
+          el.innerHTML = "";
+          loopTyping();
+      }
+
+      function deletingEffect() {
+          const el = document.getElementById('typing');
+          if(!el) return;
+          let word = words[i].split("");
+          let loopDeleting = function() {
+              if (word.length > 0) {
+                  word.pop();
+                  el.innerHTML = word.join("");
+              } else {
+                  i = (i + 1) % words.length;
+                  typingEffect();
+                  return;
+              }
+              timer = setTimeout(loopDeleting, 100);
+          };
+          loopDeleting();
+      }
+
+      typingEffect();
+    });
+
+    /* ===== Slide-up on view (your originals) ===== */
+    document.addEventListener("DOMContentLoaded", function() {
+        const section = document.querySelector('.slide-up-section');
+        if(!section) return;
+        const observer = new IntersectionObserver(function(entries){
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    section.classList.add('visible');
+                    observer.unobserve(section);
+                }
+            });
+        }, { threshold: 0.2 });
+        observer.observe(section);
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections4 = document.querySelectorAll('.slide-up-section4');
+        const observer4 = new IntersectionObserver(function(entries, observer){
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        sections4.forEach(section => observer4.observe(section));
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections5 = document.querySelectorAll('.slide-up-section5');
+        const observer5 = new IntersectionObserver(function(entries, observer){
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        sections5.forEach(section => observer5.observe(section));
+    });
+
+    /* ===== Horizontal Slideshow (NEW) ===== */
+    document.addEventListener('DOMContentLoaded', function(){
+      const slidesTrack = document.querySelector('.slides');
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      if(!slidesTrack || slides.length === 0) return;
+
+      let index = 0;
+      const total = slides.length;
+
+      function goTo(i){
+        index = (i + total) % total;
+        slidesTrack.style.transform = `translateX(-${index * 100}%)`;
+        // update dots
+        if(dots.length){
+          dots.forEach((d, di) => d.classList.toggle('active', di === index));
+        }
+      }
+
+      // auto-slide every 5s
+      setInterval(() => goTo(index + 1), 7000);
+
+      // (optional) click on dots
+      dots.forEach((d, di) => {
+        d.style.cursor = 'pointer';
+        d.addEventListener('click', () => goTo(di));
+      });
+
+      goTo(0);
+    });
+ </script>
 </body>
 </html>
