@@ -18,7 +18,6 @@
       --text-light: #6b7280;
       --bg: #f9fafb;
       --white: #ffffff;
-      --accent: #ff6b35;
       --shadow: 0 10px 30px rgba(0,0,0,0.08);
       --transition: all 0.3s ease;
     }
@@ -239,23 +238,39 @@
       border-radius: 12px;
       box-shadow: var(--shadow);
       text-align: left;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .cont2-3:hover, .cont3-1:hover, .cont3-2:hover {
       transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+
+    .image {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cont2-3:hover .image,
+    .cont3-1:hover .image,
+    .cont3-2:hover .image {
+      transform: scale(1.05);
     }
 
     .word {
       font-weight: 600;
       font-size: 20px;
-      margin: 16px 0 8px;
+      margin: 8px 0;
     }
 
     .cont2-4 {
       color: var(--text-light);
       font-size: 14px;
       line-height: 1.6;
+      margin: 12px 0;
     }
 
     .ttt {
@@ -265,7 +280,6 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      margin-top: 12px;
     }
 
     /* =========================
@@ -367,8 +381,8 @@
     .level7 {
       display: flex;
       justify-content: center;
-      align-items:center;
-      text-align:center;
+      align-items: center;
+      text-align: center;
       gap: 60px;
       margin: 80px 0;
       flex-wrap: wrap;
@@ -518,11 +532,18 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .level12ii:hover, .l12iv:hover {
+      transform: translateY(-6px);
     }
 
     .l12i, .l12iv2 {
       width: 100%;
       border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
     }
 
     .l12ii {
@@ -768,14 +789,14 @@
               <span id="typing" class="text2"></span><br>
             </div>
             <div class="text3-1">
-              <span class="text3">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</span><br>
+              <span class="text3">With unique designs and strategic branding, we help your business stand out and grow fast.</span><br>
             </div>
             <div class="bodyii">
               <button class="text4">Get started a project</button>
             </div>
           </div>
           <div class="bodyiii">
-            <img class="text5" src="img/Image.png" alt="Hero Image">
+            <img class="text5" src="img/workspace.jpeg" alt="Creative workspace with laptop and design tools">
           </div>
         </div>
 
@@ -787,14 +808,14 @@
               <span class="text2">We Build Stunning Graphics</span><br>
             </div>
             <div class="text3-1">
-              <span class="text3">Your brand deserves unique and eye-catching visuals tailored just for you.</span><br>
+              <span class="text3">From logos to full brand identities, we create visuals that captivate and convert.</span><br>
             </div>
             <div class="bodyii">
               <button class="text4">Explore Designs</button>
             </div>
           </div>
           <div class="bodyiii">
-            <img class="text5" src="img/ConsoleDelivery.png" alt="Design Image">
+            <img class="text5" src="img/ConsoleDelivery.png" alt="Creative design dashboard">
           </div>
         </div>
       </div>
@@ -813,39 +834,44 @@
       <span class="cont2-0">Our services</span>
     </div>
     <div class="cont2-1">
-      <span>We provide great services to our customers based on needs</span>
+      <span>We provide professional services tailored to your brand and goals</span>
     </div>
     <div class="cont2-2 slide-up-section">
+      <!-- Service 1: Graphic Design -->
       <div class="cont2-3">
-        <img class="image" src="img/Designer-rafiki.png" alt="Graphic Design">
+        <img class="image" src="img/graph.jpeg" alt="Professional Graphic Design Services">
         <br><br>
         <span class="word">Graphic Design</span><br>
         <div class="cont2-4">
-          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+          <span>Logos, branding, social media graphics, and marketing materials designed for impact.</span>
         </div>
         <div class="contt1">
           <a class="ttt" href=""><span>Learn more</span>
           <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
+
+      <!-- Service 2: Web Development -->
       <div class="cont3-1">
-        <img class="image" src="img/Programming-rafiki.png" alt="Web Development">
+        <img class="image" src="img/Herod.jpeg" alt="Professional Web Development">
         <br><br>
         <span class="word">Web Development</span><br>
         <div class="cont2-4">
-          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+          <span>Responsive, fast, and SEO-friendly websites built with modern tech and clean code.</span>
         </div>
         <div class="contt1">
           <a class="ttt" href=""><span>Learn more</span>
           <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
+
+      <!-- Service 3: Content Writing -->
       <div class="cont3-2">
-        <img class="image" src="img/Designer-rafiki.png" alt="Content Writing">
+        <img class="image" src="img/content.jpeg" alt="Professional Content Writing">
         <br><br>
         <span class="word">Content Writing</span><br>
         <div class="cont2-4">
-          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+          <span>Engaging blogs, website copy, and SEO content that speaks to your audience.</span>
         </div>
         <div class="contt1">
           <a class="ttt" href=""><span>Learn more</span>
@@ -858,13 +884,13 @@
   <!-- TESTIMONIAL -->
   <div class="level4">
     <div class="level4i">
-      <img class="level4i1" src="img/Oval (1).png" alt="Client">
+      <img class="level4i1" src="img/Oval (1).png" alt="Franklin Hicks">
     </div>
     <div class="level4i3">
-      <img class="level4i2" src="img/Stars.png" alt="Stars">
+      <img class="level4i2" src="img/Stars.png" alt="5-star rating">
       <br><br>
       <div class="level4ii slide-up-section4">
-        "OMG! I cannot believe that i have got a brand new landing page after getting Albino. It was super easy to edit and publish."
+        "OMG! I cannot believe that I got a brand-new landing page in just one week. It was super easy to edit and publish. Highly recommend!"
       </div><br><br>
       <div class="level4iii slide-up-section4">
         <span class="level4iii1">Franklin Hicks</span>
@@ -883,16 +909,16 @@
     </div>
     <div class="level6">
       <div class="level6i">
-        <img class="l6i1" src="img/1.png" alt="Image 1">
+        <img class="l6i1" src="img/1.png" alt="Team meeting">
       </div>
       <div class="level6ii">
-        <img class="l6ii1" src="img/2.png" alt="Image 2">
+        <img class="l6ii1" src="img/2.png" alt="Strategy session">
         <div class="l6ii2 slide-up-section5">
-          We share common trends and strategies for improving your rental income and making sure you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
+          We share proven trends and strategies to grow your brand, boost engagement, and increase conversions. With our no-code tools and expert team, you can build powerful pages fast — without hiring developers.
         </div>
       </div>
       <div class="level6iii">
-        <img class="l6iii1" src="img/3.png" alt="Image 3">
+        <img class="l6iii1" src="img/3.png" alt="Happy client">
       </div>
     </div>
   </div>
@@ -901,15 +927,15 @@
   <div class="level7">
     <div class="l71">
       <div class="l71i"><span>1M+</span></div>
-      <div class="l71ii"><span>Customers visit Omega every month to get their service done.</span></div>
+      <div class="l71ii"><span>Monthly visitors trust us for quality service and fast delivery.</span></div>
     </div>
     <div class="l72">
       <div class="l72i"><span>92%</span></div>
-      <div class="l72ii"><span>Satisfaction rate comes from our awesome customers.</span></div>
+      <div class="l72ii"><span>Client satisfaction rate from real reviews and feedback.</span></div>
     </div>
     <div class="l73">
       <div class="l73i"><span>4.9/5.0</span></div>
-      <div class="l73ii"><span>Average customers ratings we have got all over internet.</span></div>
+      <div class="l73ii"><span>Average rating across platforms like Trustpilot and Google.</span></div>
     </div>
   </div>
 
@@ -919,37 +945,37 @@
   <div class="level8">
     <div class="l81">
       <div class="l81i"><span>WHY CHOOSE US</span></div>
-      <div class="l81ii"><span>People choose us because we serve the best for everyone</span></div>
+      <div class="l81ii"><span>People choose us because we deliver quality, speed, and care</span></div>
     </div>
     <div class="level9">
       <div class="l90">
-        <div class="l91"><img class="l91-i" src="img/Icon (2).png" alt="Icon"></div>
+        <div class="l91"><img class="l91-i" src="img/Icon (2).png" alt="Dedicated manager"></div>
         <div class="l91i">
           <div class="l91ii slide-up-section5"><span>Dedicated project manager</span></div>
-          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+          <div class="l91iii slide-up-section5"><span>You’ll have a single point of contact to ensure smooth communication and fast delivery.</span></div>
         </div>
       </div>
       <div class="l90">
-        <div class="l91"><img class="l91-i" src="img/Icon.png" alt="Icon"></div>
+        <div class="l91"><img class="l91-i" src="img/Icon.png" alt="Organized task"></div>
         <div class="l91i">
-          <div class="l91ii slide-up-section5"><span>Organized task</span></div>
-          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+          <div class="l91ii slide-up-section5"><span>Organized workflow</span></div>
+          <div class="l91iii slide-up-section5"><span>We use agile methods and tools like Trello and Notion to keep your project on track.</span></div>
         </div>
       </div>
     </div>
     <div class="level9">
       <div class="l90">
-        <div class="l91"><img class="l91-i" src="img/Icon (1).png" alt="Icon"></div>
+        <div class="l91"><img class="l91-i" src="img/Icon (1).png" alt="Feedback"></div>
         <div class="l91i">
           <div class="l91ii slide-up-section5"><span>Easy feedback sharing</span></div>
-          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+          <div class="l91iii slide-up-section5"><span>Share comments directly on designs and get revisions fast.</span></div>
         </div>
       </div>
       <div class="l90">
-        <div class="l91"><img class="l91-i" src="img/Icon (3).png" alt="Icon"></div>
+        <div class="l91"><img class="l91-i" src="img/Icon (3).png" alt="Deadline"></div>
         <div class="l91i">
-          <div class="l91ii slide-up-section5"><span>Never miss deadline</span></div>
-          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+          <div class="l91ii slide-up-section5"><span>Never miss a deadline</span></div>
+          <div class="l91iii slide-up-section5"><span>We commit to timelines and deliver on time — every time.</span></div>
         </div>
       </div>
     </div><br><br><br><br><br>
@@ -960,7 +986,7 @@
     <div class="level10">
       <div class="l10">
         <div class="l10i">Ready to launch your next project?</div>
-        <div class="l10ii">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
+        <div class="l10ii">Let’s build something amazing together — fast, professional, and stress-free.</div>
       </div>
       <div class="l10iii"><button class="l10iv">Get started a project</button></div>
     </div>
@@ -970,29 +996,29 @@
   <div class="G11">
     <div class="level11">
       <div class="l11"><span>Case studies</span></div>
-      <div class="l11i"><span>Our work describe why we are the best in the business</span></div>
+      <div class="l11i"><span>See how we’ve helped brands grow with design and strategy</span></div>
     </div>
     <div class="level12">
       <div class="Level12i">
         <div class="level12ii">
-          <div class="l12"><img class="l12i" src="img/Img.png" alt="Project"></div>
+          <div class="l12"><img class="l12i" src="img/Img.png" alt="Aura Branding Project"></div>
           <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
           <div class="l12iii slide-up-section5"><span>Aura Branding Design</span></div>
         </div>
         <div class="l12iv">
-          <div class="l12iv1"><img class="l12iv2" src="img/Img (3).png" alt="Project"></div>
+          <div class="l12iv1"><img class="l12iv2" src="img/Img (3).png" alt="Gradient Website"></div>
           <div class="l12ii slide-up-section5"><span>Web development</span></div>
           <div class="l12iii slide-up-section5"><span>Gradient Website Development</span></div>
         </div>
       </div>
       <div class="Level12i">
         <div class="level12ii">
-          <div class="l12"><img class="l12i" src="img/Img (1).png" alt="Project"></div>
+          <div class="l12"><img class="l12i" src="img/Img (1).png" alt="Snack Packaging"></div>
           <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
           <div class="l12iii slide-up-section5"><span>AB.S Snack Packaging</span></div>
         </div>
         <div class="l12iv">
-          <div class="l12iv1"><img class="l12iv2" src="img/Img (2).png" alt="Project"></div>
+          <div class="l12iv1"><img class="l12iv2" src="img/Img (2).png" alt="Magazine Content"></div>
           <div class="l12ii slide-up-section5"><span>Content Writing</span></div>
           <div class="l12iii slide-up-section5"><span>Magazine Content Writing</span></div>
         </div>
@@ -1005,7 +1031,7 @@
   <div class="level13">
     <div class="l13i"><span>TESTIMONIAL</span></div>
     <div class="l13ii">“Simply the best. Better than all the rest. I'd recommend this product to beginners and advanced users.”</div>
-    <div class="l13iii"><img src="img/Oval (2).png" alt="Ian"></div>
+    <div class="l13iii"><img src="img/Oval (2).png" alt="Ian Klein"></div>
     <div class="l13iv"><span>Ian Klein</span></div>
     <div class="l13v"><span>Digital Marketer</span></div>
   </div>
@@ -1015,7 +1041,7 @@
     <div class="level14i">
       <div class="l14i slide-up-section5">
         <div class="l14ii">Ready to launch your next project?</div>
-        <div class="l14iii">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
+        <div class="l14iii">Let’s bring your vision to life with speed, creativity, and precision.</div>
       </div>
       <div class="l14iv"><a href=""><button class="l14v">Get started a project</button></a></div>
     </div>
@@ -1023,8 +1049,8 @@
     <div class="footer">
       <div class="level15 slide-up-section5">
         <div class="l15"><span>Brainwave.io</span></div>
-        <div class="l15i">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
-        <div class="l15ii"><img class="l15iii" src="img/Social.png" alt="Social"></div>
+        <div class="l15i">We help creative brands and startups grow with stunning design and smart development.</div>
+        <div class="l15ii"><img class="l15iii" src="img/Social.png" alt="Follow us on social media"></div>
       </div>
       <div class="slide-up-section5">
         <div class="last"><span>Company</span></div>
@@ -1052,7 +1078,7 @@
         <div class="last"><span>Legal</span></div>
         <p>Privacy policy</p>
         <p>Terms and Conditions</p>
-        <p>Return polices</p>
+        <p>Return policies</p>
       </div>
     </div>
   </div>
@@ -1111,5 +1137,3 @@
 
 </body>
 </html>
-
-
