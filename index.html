@@ -1,828 +1,1111 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        *{ 
-            margin:0; 
-            padding:0; 
-        }
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: url(img/beautiful-white-background.png);
-            background-position: center;
-            background-size: cover;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShadePro - Creative Agency</title>
 
-        .content{
-            height:100dvh;
-            background-image:url(img/ChatGPT\ Image\ Aug\ 24\,\ 2025\,\ 06_39_44\ PM.png);
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
-        .header{
-            display: flex;
-            gap: 50px;
-            padding-left: 100px;
-            padding-top: 10px;
-        }
-        .cont{
-            font-family:Arial, Helvetica, sans-serif;
-            font-weight: 700;
-            font-size: 35px;
-            color:#473BF0;
-        }
-        .cont1{
-            display: flex;
-            gap: 40px;
-            font-size: 15px;
-            font-weight: 700;
-            padding-top: 10px;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: all 0.6s ease;
-        }
-        a:hover{ color: #473BF0; }
-        .cont2{ padding-left: 300px; }
-        .cont3{
-            background-color: #473BF0;
-            color: white;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 6px;
-            border: 1px solid #473BF0;
-            transition: all 0.6s ease;
-            cursor: pointer;
-        }
-        .cont3:hover{ background-color: #2c23aab0; }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        /* ===== SLIDESHOW (NEW) ===== */
-        .slideshow-container{
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: calc(100dvh - 70px); /* full hero minus header area */
-        }
-        .slides{
-            display: flex;
-            height: 100%;
-            transition: transform 0.9s ease-in-out;
-            will-change: transform;
-        }
-        .slide{
-            flex: 0 0 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            padding: 50px 20px;
-        }
+  <style>
+    :root {
+      --primary: #635bff;
+      --text: #111827;
+      --text-light: #6b7280;
+      --bg: #f9fafb;
+      --white: #ffffff;
+      --accent: #ff6b35;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --transition: all 0.3s ease;
+    }
 
-        /* Your original hero inner layout reused inside each slide */
-        
-        .text1{
-            color:#F64B4B;
-            font-weight: 700;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .text2-{ width: 400px; padding-top: 20px; color: white; }
-        .text2{ font-size:40px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; }
-        .text3-1{ padding-top: 20px; width: 400px; }
-        .text3{ font-weight: 400; opacity: 0.7; color: white; }
-        .bodyii{ padding-top: 20px; }
-        .text4{
-            background-color: #473BF0;
-            padding: 10px;
-            font-size: 17px;
-            color: white;
-            border-radius: 5px;
-            border: 1px solid #473BF0;
-            transition: all 0.6s ease;
-            cursor: pointer;
-        }
-        .text4:hover{ background-color: #2921a3; }
-    
-        .text5{ width: 400px; max-width: 90vw; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .dots{
-            position: absolute;
-            left: 50%;
-            bottom: 18px;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-        .dot{
-            width: 10px; height: 10px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-        }
-        .dot.active{ background: rgba(255,255,255,0.9); }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
 
-        .content2{
-            padding-top: 70px;
-            background-image: url(img/white-background.png);
-            background-position: bottom;
-            background-size: cover;
-            height: 100dvh;
-        }
-        .contt2{ text-align: center; }
-        .cont2-0{ color:#F64B4B; font-size: 18px; }
-        .cont2-1{
-            padding-top: 10px;
-            text-align: center;
-            width: 390px;
-            font-size: 25px;
-            padding-left: 490px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-        .cont2-2{
-            display: flex;
-            gap: 50px;
-            justify-content: center;
-            align-items: center;
-        }
-        .cont2-3{
-            background-color: #68D585;
-            width: 300px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .image{ width: 70px; }
-        .word{
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .cont2-4{
-            width: 220px;
-            font-size: 17px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight:lighter;
-            padding-left: 10px;
-            opacity: 0.8;
-            color:white;    
-        }
-        .contt1{ color: white; margin-top: 40px; }
-        .cont11{ padding-top: 12px; }
-        .cont3-1{
-            background-color:#473BF0;
-            width: 300px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .cont3-2{
-            background-color:#F64B4B;
-            width: 300px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .slide-up-section{ opacity:0; transform: translateY(100px); transition: opacity 2s ease, transform 2s cubic-bezier(.23,1.01,.32,1); }
-        .slide-up-section.visible{ opacity:1; transform: translateY(0); }
+    /* =========================
+       HEADER / NAV
+       ========================= */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 5%;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 1000;
+    }
 
-        .level4{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-            background-image: url(img/BG\ \(1\).png);
-        }
-        .slide-up-section4{ opacity:0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.23,1.01,.32,1); }
-        .slide-up-section4.visible{ opacity:1; transform: translateY(0); }
+    .cont {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--primary);
+    }
 
-        .level4i1{ width: 150px; }
-        .level4i2{ width: 100px; }
-        .level4i3{ padding-left: 50px; }
-        .level4ii{ font-weight: bold; width: 420px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
-        .level4iii1{ font-size: 15px; font-weight: bolder; font-family: Arial, Helvetica, sans-serif; }
-        .level4iii2{ font-size: 15px; color:darkgray; font-family: Arial, Helvetica, sans-serif; }
+    .cont1 {
+      display: flex;
+      gap: 32px;
+    }
 
-        .level5{
-            padding-top: 50px;
-            margin-top: 50px;
-            padding-left: 300px;
-            height: 100dvh;
-            background-image: url(img/ChatGPT\ Image\ Aug\ 24\,\ 2025\,\ 06_39_44\ PM.png);
-        }
-        .slide-up-section5{ opacity:0; transform: translateY(60px); transition: opacity 1.2s ease, transform 1.2s cubic-bezier(.23,1.01,.32,1); }
-        .slide-up-section5.visible{ opacity:1; transform: translateY(0); }
-        .level5ii{ color: orangered; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; }
-        .level5iii{ padding-top: 20px; font-size: 20px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; width: 320px; color: white; }
+    .cont1 a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        .level6{ display: flex; padding-top: 50px; gap: 50px; }
-        .level6i{ padding-top: 50px; }
-        .l6i1{ width: 270px; }
-        .l6ii1{ width: 200px; }
-        .l6ii2{
-            width: 400px;
-            display: flex;
-            position: absolute;
-            font-size: 18px;
-            color:white;
-            padding-top: 80px;
-        }
-        .level6iii{ padding-top: 60px; }
-        .l6iii1{ width: 100px; }
+    .cont1 a:hover {
+      color: var(--primary);
+    }
 
-        .level7{
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            background-image: url(img/BG\ \(1\).png);
-            height: 30dvh;
-            margin-top: 50px;
-        }
-        .l71i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
-        .l71ii{ width: 250px; text-align: center; padding-top: 15px; opacity: 0.7; font-size: 20px; }
-        .l72i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
-        .l72ii{ width: 250px; text-align: center; padding-top: 15px; opacity: 0.7; font-size: 20px; }
-        .l73i{ text-align: center; font-size: 25px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
-        .l73ii{ width: 250px; text-align: center; font-size: 20px; padding-top: 15px; opacity: 0.7; }
+    .cont2 {
+      margin-left: 20px;
+    }
 
-        .level8{
-            background-image: url(img/white-background.png);
-            height: 100dvh;
-            background-position: center;
-            background-size: cover;
-        }
-        .l81{ text-align: center; padding-top: 90px; }
-        .l81i{ color: orangered; font-size: 10px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; opacity: 0.8; }
-        .l81ii{
-            padding-top: 20px;
-            font-size: 20px;
-            padding-left: 520px;
-            width: 300px;
-            text-align: center;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    .cont3 {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
 
-        .level9{ display: flex; justify-content: center; }
-        .l90{ display: flex; gap: 20px; padding-top: 50px; }
-        .l91-i{ width: 50px; }
-        .l91ii{ font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
-        .l91iii{
-            padding-top: 20px;
-            width: 250px;
-            font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-            font-weight: bold;
-            opacity: 0.5;
-            font-size: 18px;
-        }
+    .cont3:hover {
+      background: #5048e5;
+      transform: translateY(-2px);
+    }
 
-        .level10{
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            background-image: url(img/BG\ \(1\).png);
-            height: 30dvh;
-        }
-        .l10i{ font-weight: bold; }
-        .l10ii{ padding-top: 20px; width: 450px; opacity: 0.5; font-size: 18px; font-weight: 550; }
-        .l10iii{ padding-left: 250px; padding-top: 25px; }
-        .l10iv{
-            background-color: white;
-            color: #473BF0;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #473BF0;
-            font-weight: 700;
-            font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-            transition: all 0.6s ease;
-            cursor: pointer;
-        }
-        .l10iv:hover{
-            background-color: #473BF0;
-            color: white;
-            transform: translateY(-2px);
-            border: 1px solid white;
-        }
+    /* =========================
+       SLIDESHOW
+       ========================= */
+    .slideshow-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .level11{
-            margin-top: 220px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url(img/BG\ \(2\).png);
-            padding-top: 19px;
-        }
-        .l11{ color: orangered; font-family: Arial, Helvetica, sans-serif; font-weight: 550; font-size: 15px; }
-        .l11i{
-            width: 290px;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            padding-top: 30px;
-            text-align: center;
-            font-size: large;
-            color: white;
-        }
+    .slides {
+      position: relative;
+      height: 500px;
+    }
 
-        .level12{
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-            background-image: url(img/BG\ \(2\).png);
-            color: white;
-            padding-bottom: 30px;
-        }
-        .l12i{ width: 300px; }
-        .l12ii{ padding-top: 20px; padding-left: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 500; font-size: 11px; opacity: 0.8; }
-        .l12iii{ padding-top: 10px; padding-left: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: 550; font-size: 15px; }
-        .l12iv1{ padding-top: 40px; }
-        .l12iv2{ width: 300px; }
-        .endl12{ display: flex; justify-content: center; padding: 20px; text-align: center; }
-        .endl12 a{
-            text-align: center; color: white; width: 200px; padding: 10px;
-            background-color: #2921a3; font-family: Arial, Helvetica, sans-serif; font-size: 18px;
-        }
-        .endl12 a:hover{ background-color: #473BF0; transition: all 0.6s ease; transform: scaleX(1.1); }
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      animation: fadeIn 1s ease-in-out;
+    }
 
-        .level13{ background-image: url(img/BG\ \(1\).png); height: 480px; }
-        .l13i{
-            padding-top: 100px; text-align: center; color: #68D585;
-            font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 550; padding-right: 35px;
-        }
-        .l13ii{
-            color: white; font-family: Arial, Helvetica, sans-serif; padding-top: 50px; width: 400px;
-            text-align: center; padding-left: 450px; font-size: 18px;
-        }
-        .l13iii{ padding-left: 620px; padding-top: 30px; }
-        .l13iv{
-            text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;
-            padding-top: 10px; padding-right: 15px; font-size: 13px;
-        }
-        .l13v{
-            text-align: center; color: white; font-family: Arial, Helvetica, sans-serif;
-            padding-top: 10px; padding-right: 15px; font-size: 11px; opacity: 0.6;
-        }
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
 
-        .level14{ background-image: url(img/BG\ \(2\).png); height: 600px; }
-        .level14i{ padding-top: 50px; display: flex; padding-left: 260px; }
-        .l14i{ color: white; padding-top: 20px; }
-        .l14ii{ font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
-        .l14iii{ width: 350px; padding-top: 20px; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
-        .l14iv{ padding-left: 250px; padding-top: 35px; }
-        .l14v{
-            background-color: #473BF0; color: white; padding: 8px; border-radius: 6px;
-            border: 1px solid #473BF0; font-size: 15px; cursor: pointer;
-        }
-        .l14v:hover{ background-color: #2921a3; transition: all 0.6s ease; transform: translateY(-2px); }
-        .down{ padding-top: 60px; width: 740px; padding-left: 260px; opacity: 0.4; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .footer{
-            display: flex; gap: 50px; color: white; padding-top: 100px; padding-left: 60px;
-        }
-        .level15{ padding-left: 200px; }
-        .l15{ font-size: 20px; color: white; }
-        .l15i{ width: 250px; opacity: 0.4; padding-top: 20px; }
-        .l15ii{ padding-top:40px; }
-        .l15iii{ width: 100px; }
-        p{ font-size: 15px; opacity: 0.7; }
-        .last{ font-size: 18px; margin-bottom: 5px; }
-        .ttt{ color: white; }
-    </style>
+    .bodyi, .bodyiii {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .text2 {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 10px 0;
+    }
+
+    .text3 {
+      color: var(--text-light);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .text4 {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      width: fit-content;
+      transition: var(--transition);
+    }
+
+    .text4:hover {
+      background: #5048e5;
+      transform: translateY(-2px);
+    }
+
+    .text5 {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #ccc;
+      border-radius: 50%;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .dot.active {
+      background: var(--primary);
+    }
+
+    /* =========================
+       SERVICES
+       ========================= */
+    .content2 {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .cont2-0 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .cont2-1 {
+      color: var(--text-light);
+      margin: 16px 0;
+      font-size: 18px;
+    }
+
+    .cont2-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .cont2-3, .cont3-1, .cont3-2 {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .cont2-3:hover, .cont3-1:hover, .cont3-2:hover {
+      transform: translateY(-8px);
+    }
+
+    .word {
+      font-weight: 600;
+      font-size: 20px;
+      margin: 16px 0 8px;
+    }
+
+    .cont2-4 {
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .ttt {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    /* =========================
+       TESTIMONIAL (LEVEL4)
+       ========================= */
+    .level4 {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 40px 20px;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .level4i1 {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .level4ii {
+      font-style: italic;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .level4iii1 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .level4iii2 {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    /* =========================
+       OUR STORY (LEVEL5)
+       ========================= */
+    .level5 {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .level5ii, .level5iii {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .level5iii {
+      color: var(--text-light);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .level6 {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .level6i, .level6iii {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .level6ii {
+      flex: 2;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .l6ii1, .l6i1, .l6iii1 {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .l6ii2 {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* =========================
+       STATS (LEVEL7)
+       ========================= */
+    .level7 {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 80px 0;
+      flex-wrap: wrap;
+    }
+
+    .l71i, .l72i, .l73i {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .l71ii, .l72ii, .l73ii {
+      color: var(--text-light);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    hr {
+      max-width: 890px;
+      margin: 60px auto;
+      border: 1px solid #eee;
+    }
+
+    /* =========================
+       WHY CHOOSE US (LEVEL8)
+       ========================= */
+    .level8 {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .l81i {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .l81ii {
+      text-align: center;
+      color: var(--text-light);
+      margin: 16px 0 40px;
+    }
+
+    .level9 {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .l90 {
+      display: flex;
+      gap: 16px;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .l91-i {
+      width: 60px;
+      height: 60px;
+    }
+
+    .l91ii {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .l91iii {
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CTA (LEVEL10)
+       ========================= */
+    .level10 {
+      text-align: center;
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #635bff, #a092ff);
+      color: white;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .l10i {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .l10ii {
+      margin: 16px 0;
+      opacity: 0.9;
+    }
+
+    .l10iv {
+      background: white;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 14px 30px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: var(--transition);
+    }
+
+    .l10iv:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    /* =========================
+       CASE STUDIES (G11)
+       ========================= */
+    .G11 {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .l11 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .l11i {
+      color: var(--text-light);
+      margin: 16px 0;
+    }
+
+    .Level12i {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .level12ii, .l12iv {
+      flex: 1;
+      min-width: 280px;
+      background: var(--white);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .l12i, .l12iv2 {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .l12ii {
+      font-weight: 500;
+      color: var(--text-light);
+      margin-top: 12px;
+    }
+
+    .l12iii {
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .endl12 {
+      margin-top: 30px;
+    }
+
+    .endl12 a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* =========================
+       TESTIMONIAL (LEVEL13)
+       ========================= */
+    .level13 {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px 20px;
+      text-align: center;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .l13i {
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    .l13ii {
+      font-style: italic;
+      color: var(--text);
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+
+    .l13iii img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .l13iv, .l13v {
+      margin-top: 12px;
+    }
+
+    .l13iv {
+      font-weight: 600;
+    }
+
+    .l13v {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    /* =========================
+       FINAL CTA (LEVEL14)
+       ========================= */
+    .level14 {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    .level14i {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #635bff, #a092ff);
+      color: white;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .l14ii {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .l14iii {
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .l14v {
+      background: white;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .down hr {
+      margin: 60px auto;
+      max-width: 1160px;
+      border-color: #eee;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .l15 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .l15i {
+      margin: 16px 0;
+      line-height: 1.6;
+    }
+
+    .l15iii {
+      margin-top: 16px;
+    }
+
+    .last {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .footer p {
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    .footer p:hover {
+      color: var(--primary);
+    }
+
+    /* =========================
+       ANIMATIONS
+       ========================= */
+    .slide-up-section, .slide-up-section4, .slide-up-section5 {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .slide-up-section.active,
+    .slide-up-section4.active,
+    .slide-up-section5.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .cont1 {
+        margin-top: 10px;
+        gap: 16px;
+      }
+
+      .text1, .text2 {
+        font-size: 28px;
+      }
+
+      .level4 {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .level14i {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .l14iv {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .text1, .text2 { font-size: 24px; }
+      .level10, .level14i { padding: 30px 16px; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ===== HERO ===== -->
-    <div class="content">
-      <div class="header">
-          <span class="cont">ShadePro</span>
-          <div class="cont1">
-              <a href="">Demos</a>
-              <a href="">Pages</a>
-              <a href="">support</a>
-              <a href="">Contact</a>
+  <!-- HEADER -->
+  <div class="content">
+    <div class="header">
+      <span class="cont">ShadePro</span>
+      <div class="cont1">
+        <a href="">Demos</a>
+        <a href="">Pages</a>
+        <a href="">Support</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="cont2">
+        <button class="cont3">Get started a project</button>
+      </div>
+    </div>
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow-container">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <div class="bodyi">
+            <span class="text1">Let's shift your business</span><br>
+            <div class="text2-">
+              <span id="typing" class="text2"></span><br>
+            </div>
+            <div class="text3-1">
+              <span class="text3">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</span><br>
+            </div>
+            <div class="bodyii">
+              <button class="text4">Get started a project</button>
+            </div>
           </div>
-          <div class="cont2">
-              <button class="cont3">Get started a project</button>
+          <div class="bodyiii">
+            <img class="text5" src="img/Image.png" alt="Hero Image">
           </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="bodyi">
+            <span class="text1">Creative Designs</span><br>
+            <div class="text2-">
+              <span class="text2">We Build Stunning Graphics</span><br>
+            </div>
+            <div class="text3-1">
+              <span class="text3">Your brand deserves unique and eye-catching visuals tailored just for you.</span><br>
+            </div>
+            <div class="bodyii">
+              <button class="text4">Explore Designs</button>
+            </div>
+          </div>
+          <div class="bodyiii">
+            <img class="text5" src="img/ConsoleDelivery.png" alt="Design Image">
+          </div>
+        </div>
       </div>
 
-      <!-- SLIDESHOW START -->
-      <div class="slideshow-container">
-        <div class="slides">
-          <!-- Slide 1 (with typing effect) -->
-          <div class="slide">
-            <div class="bodyi">
-              <span class="text1">Let's shift your business</span><br>
-              <div class="text2-">
-                <span id="typing" class="text2"></span><br>
-              </div>
-              <div class="text3-1">
-                <span class="text3">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.</span><br>
-              </div>
-              <div class="bodyii">
-                  <button class="text4">Get started a project</button>
-              </div>
-            </div>
-            <div class="bodyiii">
-                <img class="text5" src="img/Image.png" alt="">
-            </div>
-          </div>
+      <!-- Dots -->
+      <div class="dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+      </div>
+    </div>
+  </div>
 
-          <!-- Slide 2 -->
-          <div class="slide">
-            <div class="bodyi">
-              <span class="text1">Creative Designs</span><br>
-              <div class="text2-">
-                <span class="text2">We Build Stunning Graphics</span><br>
-              </div>
-              <div class="text3-1">
-                <span class="text3">Your brand deserves unique and eye-catching visuals tailored just for you.</span><br>
-              </div>
-              <div class="bodyii">
-                  <button class="text4">Explore Designs</button>
-              </div>
-            </div>
-            <div class="bodyiii">
-                <img style="width: 600px;" class="text5" src="img/ConsoleDelivery.png" alt="">
-            </div>
-          </div>
-
-          
-        <!-- dots (optional) -->
-        <div class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
+  <!-- SERVICES -->
+  <div class="content2">
+    <div class="contt2">
+      <span class="cont2-0">Our services</span>
+    </div>
+    <div class="cont2-1">
+      <span>We provide great services to our customers based on needs</span>
+    </div>
+    <div class="cont2-2 slide-up-section">
+      <div class="cont2-3">
+        <img class="image" src="img/Designer-rafiki.png" alt="Graphic Design">
+        <br><br>
+        <span class="word">Graphic Design</span><br>
+        <div class="cont2-4">
+          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+        </div>
+        <div class="contt1">
+          <a class="ttt" href=""><span>Learn more</span>
+          <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- SLIDESHOW END -->
+      <div class="cont3-1">
+        <img class="image" src="img/Programming-rafiki.png" alt="Web Development">
+        <br><br>
+        <span class="word">Web Development</span><br>
+        <div class="cont2-4">
+          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+        </div>
+        <div class="contt1">
+          <a class="ttt" href=""><span>Learn more</span>
+          <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="cont3-2">
+        <img class="image" src="img/Designer-rafiki.png" alt="Content Writing">
+        <br><br>
+        <span class="word">Content Writing</span><br>
+        <div class="cont2-4">
+          <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
+        </div>
+        <div class="contt1">
+          <a class="ttt" href=""><span>Learn more</span>
+          <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>  
     </div>
+  </div>
 
-    <!-- ===== REST OF YOUR ORIGINAL PAGE ===== -->
-    <div class="content2">
-        <div class="contt2">
-        <span class="cont2-0">Our services</span>
-        </div>
-        <div class="cont2-1">
-            <span>We provide great services to our customers based on needs</span>
-        </div>
-        <div class="cont2-2 slide-up-section">
-            <div class="cont2-3">
-                <img class="image" src="img/Designer-rafiki.png" alt=""><br><br>
-                <span class="word">Graphic Design</span><br>
-                <div class="cont2-4">
-                <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
-                </div>
-                <div class="contt1">
-                <a class="ttt"  href=""><span>Learn more</span>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-            <div class="cont3-1">
-                <img class="image" src="img/Programming-rafiki.png" alt=""><br><br>
-                <span class="word">Web Development</span><br>
-                <div class="cont2-4">
-                <span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
-                </div>
-                <div class="contt1">
-                <a class="ttt" href=""><span>Learn more</span>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="cont3-2">
-                <img class="image" src="img/Designer-rafiki.png" alt=""><br><br>
-                <span class="word">Content Writing</span><br>
-                <div class="cont2-4">
-                <span>With  lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
-                </div>
-                <div class="contt1">
-                <a  class="ttt" href=""><span>Learn more</span>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>  
-        </div>
+  <!-- TESTIMONIAL -->
+  <div class="level4">
+    <div class="level4i">
+      <img class="level4i1" src="img/Oval (1).png" alt="Client">
     </div>
+    <div class="level4i3">
+      <img class="level4i2" src="img/Stars.png" alt="Stars">
+      <br><br>
+      <div class="level4ii slide-up-section4">
+        "OMG! I cannot believe that i have got a brand new landing page after getting Albino. It was super easy to edit and publish."
+      </div><br><br>
+      <div class="level4iii slide-up-section4">
+        <span class="level4iii1">Franklin Hicks</span>
+        <span class="level4iii2">Web Developer</span>
+      </div>
+    </div>
+  </div>
 
-    <div class="level4">
-        <div class="level4i">
-            <img class="level4i1" src="img/Oval (1).png" alt="">
-        </div>
-        <div class="level4i3">
-            <img class="level4i2" src="img/Stars.png" alt=""><br><br>
-            <div class="level4ii slide-up-section4">
-                <span>"OMG! I cannot believe that i have got a brand new landing page after getting Albino. It was super easy to edit and publish."</span>
-            </div><br><br>
-            <div class="level4iii slide-up-section4">
-                <span class="level4iii1">Franklin Hicks</span>
-                <span class="level4iii2">Web Developer</span>
-            </div>
-        </div>
-    </div>
-   
-    <hr width="890px">
-    <div class="level5">
-        <div class="level5i">
-            <div class="level5ii"> 
-            <span class="slide-up-section5">Our Story</span>
-            </div>
-            <div class="level5iii">
-            <span class="slide-up-section5">We know how everything works and why your business is failing over and over again.</span>
-            </div>
-        </div>
-        <div class="level6">
-        <div class="level6i">
-        <img class="l6i1" src="img/1.png" alt="">
-        </div>
-        <div class="level6ii">
-            <img class="l6ii1" src="img/2.png" alt="">
-            <div class="l6ii2">
-            <span class="slide-up-section5">We share common trends and strategies for improving your rental income and making sure you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span>
-            </div>
-        </div>
-        <div class="level6iii">
-            <img class="l6iii1" src="img/3.png" alt="">
-        </div>
-        </div>
-    </div>
+  <hr>
 
-    <div class="level7">
-        <div class="l71">
-            <div class="l71i"><span>1M+</span></div>
-            <div class="l71ii"><span>Customers visit Omega every month to get their service done.</span></div>
-        </div>
-         <div class="l72">
-            <div class="l72i"><span>92%</span></div>
-            <div class="l72ii"><span>Satisfaction rate comes from our awesome customers.</span></div>
-        </div>
-        <div class="l73">
-            <div class="l73i"><span>4.9/5.0</span></div>
-            <div class="l73ii"><span>Average customers ratings we have got all over internet.</span></div>
-        </div>
+  <!-- OUR STORY -->
+  <div class="level5">
+    <div class="level5i">
+      <div class="level5ii slide-up-section5">Our Story</div>
+      <div class="level5iii slide-up-section5">We know how everything works and why your business is failing over and over again.</div>
     </div>
-
-    <div class="level8">
-        <div class="l81">
-            <div class="l81i"><span>WHY CHOOSE US</span></div>
-            <div class="l81ii"><span>People choose us because we serve the best for everyone</span></div>
+    <div class="level6">
+      <div class="level6i">
+        <img class="l6i1" src="img/1.png" alt="Image 1">
+      </div>
+      <div class="level6ii">
+        <img class="l6ii1" src="img/2.png" alt="Image 2">
+        <div class="l6ii2 slide-up-section5">
+          We share common trends and strategies for improving your rental income and making sure you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
         </div>
-        <div class="level9">
-            <div class="l90">
-            <div class="l91"><img class="l91-i" src="img/Icon (2).png" alt=""></div>
-            <div class="l91i">
-            <div class="l91ii slide-up-section5"><span>Dedicated project manager</span></div>
-            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
-            </div>
-            </div>
-            <div class="l90">
-            <div class="l91"><img class="l91-i" src="img/Icon.png" alt=""></div>
-            <div class="l91i">
-            <div class="l91ii slide-up-section5"><span>Organized task</span></div>
-            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
-            </div>
-            </div>
-        </div>
-        <div class="level9">
-            <div class="l90">
-            <div class="l91"><img class="l91-i" src="img/Icon (1).png" alt=""></div>
-            <div class="l91i">
-            <div class="l91ii slide-up-section5"><span>Easy feedback sharing</span></div>
-            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
-            </div>
-            </div>
-            <div class="l90">
-            <div class="l91"><img class="l91-i" src="img/Icon (3).png" alt=""></div>
-            <div class="l91i">
-            <div class="l91ii slide-up-section5"><span>Never miss deadline</span></div>
-            <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
-            </div>
-            </div>
-        </div><br><br><br><br><br>
-        <hr width="890px" >
-        <div class="level10">
-            <div class="l10">
-                <div class="l10i"><span>Ready to launch your next project?</span></div>
-                <div class="l10ii slide-up-section5"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
-            </div>
-            <div class="l10iii"><button class="l10iv">Get started a project</button></div>
-        </div>
+      </div>
+      <div class="level6iii">
+        <img class="l6iii1" src="img/3.png" alt="Image 3">
+      </div>
     </div>
+  </div>
 
+  <!-- STATS -->
+  <div class="level7">
+    <div class="l71">
+      <div class="l71i"><span>1M+</span></div>
+      <div class="l71ii"><span>Customers visit Omega every month to get their service done.</span></div>
+    </div>
+    <div class="l72">
+      <div class="l72i"><span>92%</span></div>
+      <div class="l72ii"><span>Satisfaction rate comes from our awesome customers.</span></div>
+    </div>
+    <div class="l73">
+      <div class="l73i"><span>4.9/5.0</span></div>
+      <div class="l73ii"><span>Average customers ratings we have got all over internet.</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- WHY CHOOSE US -->
+  <div class="level8">
+    <div class="l81">
+      <div class="l81i"><span>WHY CHOOSE US</span></div>
+      <div class="l81ii"><span>People choose us because we serve the best for everyone</span></div>
+    </div>
+    <div class="level9">
+      <div class="l90">
+        <div class="l91"><img class="l91-i" src="img/Icon (2).png" alt="Icon"></div>
+        <div class="l91i">
+          <div class="l91ii slide-up-section5"><span>Dedicated project manager</span></div>
+          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+        </div>
+      </div>
+      <div class="l90">
+        <div class="l91"><img class="l91-i" src="img/Icon.png" alt="Icon"></div>
+        <div class="l91i">
+          <div class="l91ii slide-up-section5"><span>Organized task</span></div>
+          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="level9">
+      <div class="l90">
+        <div class="l91"><img class="l91-i" src="img/Icon (1).png" alt="Icon"></div>
+        <div class="l91i">
+          <div class="l91ii slide-up-section5"><span>Easy feedback sharing</span></div>
+          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+        </div>
+      </div>
+      <div class="l90">
+        <div class="l91"><img class="l91-i" src="img/Icon (3).png" alt="Icon"></div>
+        <div class="l91i">
+          <div class="l91ii slide-up-section5"><span>Never miss deadline</span></div>
+          <div class="l91iii slide-up-section5"><span>With lot of unique blocks, you can easily build a page without coding. Build your next landing page</span></div>
+        </div>
+      </div>
+    </div><br><br><br><br><br>
+
+    <hr>
+
+    <!-- CTA -->
+    <div class="level10">
+      <div class="l10">
+        <div class="l10i">Ready to launch your next project?</div>
+        <div class="l10ii">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
+      </div>
+      <div class="l10iii"><button class="l10iv">Get started a project</button></div>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES -->
   <div class="G11">
     <div class="level11">
-        <div class="l11"><span>Case studies</span></div>
-        <div class="l11i"><span>Our work describe why we are the best in the business</span></div>
+      <div class="l11"><span>Case studies</span></div>
+      <div class="l11i"><span>Our work describe why we are the best in the business</span></div>
     </div>
     <div class="level12">
-        <div class="Level12i">
-            <div class="level12ii">
-                <div class="l12"><img class="l12i" src="img/Img.png" alt=""></div>
-                <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
-                <div class="l12iii slide-up-section5"><span>Aura Branding Design</span></div>
-            </div>
-            <div class="l12iv">
-                <div class="l12iv1"><img class="l12iv2" src="img/Img (3).png" alt=""></div>
-                <div class="l12ii slide-up-section5"><span>Web development</span></div>
-                <div class="l12iii slide-up-section5"><span>Gradient Website Development</span></div>
-            </div>
+      <div class="Level12i">
+        <div class="level12ii">
+          <div class="l12"><img class="l12i" src="img/Img.png" alt="Project"></div>
+          <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
+          <div class="l12iii slide-up-section5"><span>Aura Branding Design</span></div>
         </div>
-        <div class="Level12i">
-            <div class="level12ii">
-                <div class="l12"><img class="l12i" src="img/Img (1).png" alt=""></div>
-                <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
-                <div class="l12iii slide-up-section5"><span>AB.S Snack Packaging</span></div>
-            </div>
-            <div class="l12iv">
-                <div class="l12iv1"><img class="l12iv2" src="img/Img (2).png" alt=""></div>
-                <div class="l12ii slide-up-section5"><span>Content Writing</span></div>
-                <div class="l12iii slide-up-section5"><span>Magazine Content Writing</span></div>
-            </div>
+        <div class="l12iv">
+          <div class="l12iv1"><img class="l12iv2" src="img/Img (3).png" alt="Project"></div>
+          <div class="l12ii slide-up-section5"><span>Web development</span></div>
+          <div class="l12iii slide-up-section5"><span>Gradient Website Development</span></div>
         </div>
+      </div>
+      <div class="Level12i">
+        <div class="level12ii">
+          <div class="l12"><img class="l12i" src="img/Img (1).png" alt="Project"></div>
+          <div class="l12ii slide-up-section5"><span>Graphic design</span></div>
+          <div class="l12iii slide-up-section5"><span>AB.S Snack Packaging</span></div>
+        </div>
+        <div class="l12iv">
+          <div class="l12iv1"><img class="l12iv2" src="img/Img (2).png" alt="Project"></div>
+          <div class="l12ii slide-up-section5"><span>Content Writing</span></div>
+          <div class="l12iii slide-up-section5"><span>Magazine Content Writing</span></div>
+        </div>
+      </div>
     </div>
     <div class="endl12"><a href="#">See all works ➡</a></div>
   </div>
 
+  <!-- TESTIMONIAL -->
   <div class="level13">
     <div class="l13i"><span>TESTIMONIAL</span></div>
-    <div class="l13ii"><span>“Simply the best. Better than all the rest. I'd recommend this product to beginners and advanced users.”</span></div>
-    <div class="l13iii"><img src="img/Oval (2).png" alt=""></div>
+    <div class="l13ii">“Simply the best. Better than all the rest. I'd recommend this product to beginners and advanced users.”</div>
+    <div class="l13iii"><img src="img/Oval (2).png" alt="Ian"></div>
     <div class="l13iv"><span>Ian Klein</span></div>
     <div class="l13v"><span>Digital Marketer</span></div>
   </div>
 
+  <!-- FINAL CTA -->
   <div class="level14">
-   <div class="level14i">
-    <div class="l14i slide-up-section5">
-        <div class="l14ii"><span>Ready to launch your next project?</span></div>
-        <div class="l14iii"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
+    <div class="level14i">
+      <div class="l14i slide-up-section5">
+        <div class="l14ii">Ready to launch your next project?</div>
+        <div class="l14iii">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
+      </div>
+      <div class="l14iv"><a href=""><button class="l14v">Get started a project</button></a></div>
     </div>
-    <div class="l14iv"><a href=""><button class="l14v">Get started a project</button></a></div>
-   </div>
-   <div class="down"><hr></div>
-   <div class="footer">
-        <div class="level15 slide-up-section5">
-            <div class="l15"><span>Brainwave.io</span></div>
-            <div class="l15i slide-up-section5"><span>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</span></div>
-            <div class="l15ii"><img class="l15iii" src="img/Social.png" alt=""></div>
-        </div>
-        <div class="slide-up-section5">
-            <div class="last"><span>Company</span></div>
-            <p>About us</p><p>Contact us</p><p>Careers</p><p>press</p>
-        </div>
-        <div class="slide-up-section5">
-            <div class="last "><span>Product</span></div>
-            <p>Features</p><p>Pricing</p><p>News</p><p>Help desk</p><p>Support</p>
-        </div>
-        <div class="slide-up-section5">
-            <div class="last"><span>Services</span></div>
-            <p>Digital Marketing</p><p>Content Writing</p><p>SEO for Business</p><p>Ui Design</p>
-        </div>
-        <div class="slide-up-section5">
-            <div class="last"><span>Legal</span></div>
-            <p>Privacy policy</p><p>Terms and Conditions</p><p>Return polices</p>
-        </div>
-   </div>
- </div>
+    <div class="down"><hr></div>
+    <div class="footer">
+      <div class="level15 slide-up-section5">
+        <div class="l15"><span>Brainwave.io</span></div>
+        <div class="l15i">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</div>
+        <div class="l15ii"><img class="l15iii" src="img/Social.png" alt="Social"></div>
+      </div>
+      <div class="slide-up-section5">
+        <div class="last"><span>Company</span></div>
+        <p>About us</p>
+        <p>Contact us</p>
+        <p>Careers</p>
+        <p>Press</p>
+      </div>
+      <div class="slide-up-section5">
+        <div class="last"><span>Product</span></div>
+        <p>Features</p>
+        <p>Pricing</p>
+        <p>News</p>
+        <p>Help desk</p>
+        <p>Support</p>
+      </div>
+      <div class="slide-up-section5">
+        <div class="last"><span>Services</span></div>
+        <p>Digital Marketing</p>
+        <p>Content Writing</p>
+        <p>SEO for Business</p>
+        <p>Ui Design</p>
+      </div>
+      <div class="slide-up-section5">
+        <div class="last"><span>Legal</span></div>
+        <p>Privacy policy</p>
+        <p>Terms and Conditions</p>
+        <p>Return polices</p>
+      </div>
+    </div>
+  </div>
 
- <script>
-    /* ===== Typing Effect (Slide 1) ===== */
-    document.addEventListener('DOMContentLoaded', function(){
-      const words = ["Your Business.", "Your Website.", "Your Brand.", "Shift Your Business Fast With ShadePro", "Building Smart Tech Solutions"];
-      let i = 0;
-      let timer;
+  <!-- SCRIPTS -->
+  <script>
+    // Typing Effect
+    const text = "with unique designs.";
+    const typingEl = document.getElementById("typing");
+    let i = 0;
 
-      function typingEffect() {
-          const el = document.getElementById('typing');
-          if(!el) return;
-          let word = words[i].split("");
-          let loopTyping = function() {
-              if (word.length > 0) {
-                  el.innerHTML += word.shift();
-              } else {
-                  deletingEffect();
-                  return;
-              }
-              timer = setTimeout(loopTyping, 200);
-          };
-          el.innerHTML = "";
-          loopTyping();
+    function type() {
+      if (i < text.length) {
+        typingEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
       }
+    }
 
-      function deletingEffect() {
-          const el = document.getElementById('typing');
-          if(!el) return;
-          let word = words[i].split("");
-          let loopDeleting = function() {
-              if (word.length > 0) {
-                  word.pop();
-                  el.innerHTML = word.join("");
-              } else {
-                  i = (i + 1) % words.length;
-                  typingEffect();
-                  return;
-              }
-              timer = setTimeout(loopDeleting, 100);
-          };
-          loopDeleting();
-      }
+    // Start typing on first slide
+    window.addEventListener("load", () => {
+      type();
 
-      typingEffect();
-    });
-
-    /* ===== Slide-up on view (your originals) ===== */
-    document.addEventListener("DOMContentLoaded", function() {
-        const section = document.querySelector('.slide-up-section');
-        if(!section) return;
-        const observer = new IntersectionObserver(function(entries){
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    section.classList.add('visible');
-                    observer.unobserve(section);
-                }
-            });
-        }, { threshold: 0.2 });
-        observer.observe(section);
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const sections4 = document.querySelectorAll('.slide-up-section4');
-        const observer4 = new IntersectionObserver(function(entries, observer){
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        sections4.forEach(section => observer4.observe(section));
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const sections5 = document.querySelectorAll('.slide-up-section5');
-        const observer5 = new IntersectionObserver(function(entries, observer){
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        sections5.forEach(section => observer5.observe(section));
-    });
-
-    /* ===== Horizontal Slideshow (NEW) ===== */
-    document.addEventListener('DOMContentLoaded', function(){
-      const slidesTrack = document.querySelector('.slides');
-      const slides = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dot');
-      if(!slidesTrack || slides.length === 0) return;
-
-      let index = 0;
-      const total = slides.length;
-
-      function goTo(i){
-        index = (i + total) % total;
-        slidesTrack.style.transform = `translateX(-${index * 100}%)`;
-        // update dots
-        if(dots.length){
-          dots.forEach((d, di) => d.classList.toggle('active', di === index));
-        }
-      }
-
-      // auto-slide every 5s
-      setInterval(() => goTo(index + 1), 7000);
-
-      // (optional) click on dots
-      dots.forEach((d, di) => {
-        d.style.cursor = 'pointer';
-        d.addEventListener('click', () => goTo(di));
+      // Animate slide-up elements
+      document.querySelectorAll('.slide-up-section, .slide-up-section4, .slide-up-section5').forEach(el => {
+        setTimeout(() => el.classList.add('active'), 500);
       });
-
-      goTo(0);
     });
- </script>
+
+    // Slideshow Logic
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    // Click dots
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Auto slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+
 </body>
 </html>
